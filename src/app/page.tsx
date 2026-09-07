@@ -16,7 +16,6 @@ import {
   IconUsers,
   IconSchool,
   IconExternalLink,
-  IconBrandGithub,
   IconMail,
   IconPhone,
   IconMapPin
@@ -78,7 +77,7 @@ export default function ResumePage() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-2.5 max-w-2xl text-balance text-3xl font-extrabold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl leading-[1.18] text-center"
+          className="mt-2.5 max-w-3xl text-balance text-3xl font-extrabold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl leading-[1.18] text-center"
         >
           Aspiring{" "}
           <span className="inline-flex items-center align-middle mx-1 -mt-1 p-1 rounded-lg bg-neutral-100 border border-neutral-300 shadow-2xs">
@@ -135,14 +134,14 @@ export default function ResumePage() {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.45 }}
-        className="space-y-10 text-[15px] leading-relaxed text-neutral-700 max-w-2xl mx-auto"
+        className="space-y-10 text-[15px] leading-relaxed text-neutral-700 max-w-3xl mx-auto"
       >
         {/* ── SECTION: Summary ── */}
         <section className="space-y-2">
           <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-400 flex items-center gap-1.5">
             <span>Summary</span>
           </h2>
-          <p className="text-[15px] leading-relaxed text-neutral-800 bg-white/60 p-4 rounded-xl border border-neutral-200/80 shadow-2xs">
+          <p className="text-[15px] leading-relaxed text-neutral-800 bg-white/70 p-5 rounded-2xl border border-neutral-200/80 shadow-2xs">
             Final-year Computer Science student with experience in <strong>Full Stack Development</strong>, <strong>React</strong>, <strong>Next.js</strong>, <strong>Firebase</strong>, and <strong>AWS</strong>. Built multilingual web platforms, admin dashboards, and client-facing applications through freelancing and professional work. Passionate about creating scalable digital products with strong user experience and performance optimization.
           </p>
         </section>
@@ -153,15 +152,15 @@ export default function ResumePage() {
             <IconSchool size={15} />
             <span>Education</span>
           </h2>
-          <div className="rounded-xl border border-neutral-200/80 bg-white/80 p-4 shadow-2xs">
+          <div className="rounded-2xl border border-neutral-200/80 bg-white/85 p-5 shadow-2xs">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-              <h3 className="font-bold text-neutral-900">B.Tech in Computer Science &amp; Engineering</h3>
+              <h3 className="font-bold text-neutral-900 text-[16px]">B.Tech in Computer Science &amp; Engineering</h3>
               <span className="text-xs font-semibold text-neutral-500">2023 – Present</span>
             </div>
-            <p className="text-sm text-neutral-600 mt-0.5">
+            <p className="text-sm text-neutral-600 mt-1">
               <span className="font-medium text-neutral-800">Amal Jyothi College of Engineering (Autonomous)</span>, Kanjirappally
             </p>
-            <div className="mt-2 inline-flex items-center rounded-md bg-neutral-100 px-2.5 py-0.5 text-xs font-semibold text-neutral-700">
+            <div className="mt-2.5 inline-flex items-center rounded-md bg-neutral-100 px-3 py-1 text-xs font-semibold text-neutral-800">
               CGPA: 7.39
             </div>
           </div>
@@ -174,9 +173,9 @@ export default function ResumePage() {
             <span>Work Experience</span>
           </h2>
 
-          <div className="space-y-3">
+          <div className="space-y-3.5">
             {/* INCIAL */}
-            <div className="rounded-xl border border-neutral-200/90 bg-white/85 p-4 sm:p-5 shadow-2xs">
+            <div className="rounded-2xl border border-neutral-200/90 bg-white/90 p-5 sm:p-6 shadow-2xs">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                 <div>
                   <h3 className="font-bold text-neutral-900 text-[16px]">INCIAL</h3>
@@ -184,7 +183,7 @@ export default function ResumePage() {
                 </div>
                 <span className="text-xs font-medium text-neutral-500">Mar 2024 – Present</span>
               </div>
-              <ul className="mt-3 space-y-1.5 text-sm text-neutral-700 list-disc list-outside pl-4">
+              <ul className="mt-3.5 space-y-2 text-sm text-neutral-700 list-disc list-outside pl-4">
                 <li>
                   Built and shipped full-stack web products for clients using React, Next.js, and Tailwind CSS, reducing design-to-dev handoff friction through Figma-aligned components.
                 </li>
@@ -195,7 +194,7 @@ export default function ResumePage() {
             </div>
 
             {/* FREELANCE */}
-            <div className="rounded-xl border border-neutral-200/90 bg-white/85 p-4 sm:p-5 shadow-2xs">
+            <div className="rounded-2xl border border-neutral-200/90 bg-white/90 p-5 sm:p-6 shadow-2xs">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                 <div>
                   <h3 className="font-bold text-neutral-900 text-[16px]">Freelance</h3>
@@ -203,7 +202,7 @@ export default function ResumePage() {
                 </div>
                 <span className="text-xs font-medium text-neutral-500">2023 – Present</span>
               </div>
-              <ul className="mt-3 space-y-1.5 text-sm text-neutral-700 list-disc list-outside pl-4">
+              <ul className="mt-3.5 space-y-2 text-sm text-neutral-700 list-disc list-outside pl-4">
                 <li>
                   Developed and launched 5+ web applications with a 90% client satisfaction rate across diverse domains.
                 </li>
@@ -224,7 +223,7 @@ export default function ResumePage() {
 
           <div className="space-y-3.5">
             {/* Project 1: Blaupunkt EV */}
-            <div className="rounded-xl border border-neutral-200/90 bg-white/90 p-4 sm:p-5 shadow-2xs">
+            <div className="rounded-2xl border border-neutral-200/90 bg-white/90 p-5 sm:p-6 shadow-2xs">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                 <div className="flex items-center gap-2">
                   <h3 className="font-bold text-neutral-900 text-[16px]">Blaupunkt EV</h3>
@@ -246,10 +245,10 @@ export default function ResumePage() {
               <p className="mt-2 text-sm text-neutral-700">
                 Built a localization-ready product catalog and contact platform serving international markets with Resend-powered email workflows.
               </p>
-              <div className="mt-3 pt-2.5 border-t border-neutral-100 flex flex-wrap items-center gap-1.5 text-xs text-neutral-500">
-                <span className="font-semibold text-neutral-700">Tech Stack:</span>
+              <div className="mt-3.5 pt-3 border-t border-neutral-100 flex flex-wrap items-center gap-1.5 text-xs text-neutral-500">
+                <span className="font-semibold text-neutral-700 mr-1">Tech Stack:</span>
                 {["Next.js", "React", "Tailwind CSS", "next-intl", "Framer Motion", "PDF-lib"].map((tech) => (
-                  <span key={tech} className="rounded bg-neutral-100 px-2 py-0.5 text-[11px] font-medium text-neutral-700">
+                  <span key={tech} className="rounded bg-neutral-100 px-2.5 py-0.5 text-[11px] font-medium text-neutral-800">
                     {tech}
                   </span>
                 ))}
@@ -257,7 +256,7 @@ export default function ResumePage() {
             </div>
 
             {/* Project 2: LightSuvara */}
-            <div className="rounded-xl border border-neutral-200/90 bg-white/90 p-4 sm:p-5 shadow-2xs">
+            <div className="rounded-2xl border border-neutral-200/90 bg-white/90 p-5 sm:p-6 shadow-2xs">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                 <div className="flex items-center gap-2">
                   <h3 className="font-bold text-neutral-900 text-[16px]">LightSuvara — Educational Admin Dashboard</h3>
@@ -279,10 +278,10 @@ export default function ResumePage() {
               <p className="mt-2 text-sm text-neutral-700">
                 Built the Web Admin Panel managing 1,000+ users across schools, animators, and admins with role-based access, event workflows, grading, and PDF report generation.
               </p>
-              <div className="mt-3 pt-2.5 border-t border-neutral-100 flex flex-wrap items-center gap-1.5 text-xs text-neutral-500">
-                <span className="font-semibold text-neutral-700">Tech Stack:</span>
+              <div className="mt-3.5 pt-3 border-t border-neutral-100 flex flex-wrap items-center gap-1.5 text-xs text-neutral-500">
+                <span className="font-semibold text-neutral-700 mr-1">Tech Stack:</span>
                 {["React", "TypeScript", "Tailwind CSS", "Firebase", "Vite", "Shadcn UI", "Recharts"].map((tech) => (
-                  <span key={tech} className="rounded bg-neutral-100 px-2 py-0.5 text-[11px] font-medium text-neutral-700">
+                  <span key={tech} className="rounded bg-neutral-100 px-2.5 py-0.5 text-[11px] font-medium text-neutral-800">
                     {tech}
                   </span>
                 ))}
@@ -290,7 +289,7 @@ export default function ResumePage() {
             </div>
 
             {/* Project 3: Intern-Hub */}
-            <div className="rounded-xl border border-neutral-200/90 bg-white/90 p-4 sm:p-5 shadow-2xs">
+            <div className="rounded-2xl border border-neutral-200/90 bg-white/90 p-5 sm:p-6 shadow-2xs">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                 <div className="flex items-center gap-2">
                   <h3 className="font-bold text-neutral-900 text-[16px]">Intern-Hub — Centralized Internship Platform</h3>
@@ -312,10 +311,10 @@ export default function ResumePage() {
               <p className="mt-2 text-sm text-neutral-700">
                 Built a centralized internship hub for TBI AJCE students, onboarding 100+ users on launch.
               </p>
-              <div className="mt-3 pt-2.5 border-t border-neutral-100 flex flex-wrap items-center gap-1.5 text-xs text-neutral-500">
-                <span className="font-semibold text-neutral-700">Tech Stack:</span>
+              <div className="mt-3.5 pt-3 border-t border-neutral-100 flex flex-wrap items-center gap-1.5 text-xs text-neutral-500">
+                <span className="font-semibold text-neutral-700 mr-1">Tech Stack:</span>
                 {["HTML", "CSS", "JavaScript"].map((tech) => (
-                  <span key={tech} className="rounded bg-neutral-100 px-2 py-0.5 text-[11px] font-medium text-neutral-700">
+                  <span key={tech} className="rounded bg-neutral-100 px-2.5 py-0.5 text-[11px] font-medium text-neutral-800">
                     {tech}
                   </span>
                 ))}
@@ -329,9 +328,9 @@ export default function ResumePage() {
           <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-400 flex items-center gap-1.5">
             <span>Skills &amp; Capabilities</span>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div className="rounded-xl border border-neutral-200/80 bg-white/80 p-4 shadow-2xs">
-              <h3 className="text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2">Languages &amp; Frameworks</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div className="rounded-2xl border border-neutral-200/80 bg-white/85 p-5 shadow-2xs">
+              <h3 className="text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2.5">Languages &amp; Frameworks</h3>
               <div className="flex flex-wrap gap-1.5">
                 {["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "Python", "C"].map((item) => (
                   <span key={item} className="rounded-md bg-neutral-100 px-2.5 py-1 text-xs font-medium text-neutral-800">
@@ -341,8 +340,8 @@ export default function ResumePage() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-neutral-200/80 bg-white/80 p-4 shadow-2xs">
-              <h3 className="text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2">Design &amp; Creative</h3>
+            <div className="rounded-2xl border border-neutral-200/80 bg-white/85 p-5 shadow-2xs">
+              <h3 className="text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2.5">Design &amp; Creative</h3>
               <div className="flex flex-wrap gap-1.5">
                 {["Figma", "UI/UX Design", "Photoshop", "Illustrator", "Blender", "Canva", "Adobe Suite"].map((item) => (
                   <span key={item} className="rounded-md bg-neutral-100 px-2.5 py-1 text-xs font-medium text-neutral-800">
@@ -352,8 +351,8 @@ export default function ResumePage() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-neutral-200/80 bg-white/80 p-4 shadow-2xs">
-              <h3 className="text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2">Dev Tools &amp; Cloud</h3>
+            <div className="rounded-2xl border border-neutral-200/80 bg-white/85 p-5 shadow-2xs">
+              <h3 className="text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2.5">Dev Tools &amp; Cloud</h3>
               <div className="flex flex-wrap gap-1.5">
                 {["Git", "Docker", "AWS", "Firebase", "Vercel", "Vite", "Postman"].map((item) => (
                   <span key={item} className="rounded-md bg-neutral-100 px-2.5 py-1 text-xs font-medium text-neutral-800">
@@ -363,8 +362,8 @@ export default function ResumePage() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-neutral-200/80 bg-white/80 p-4 shadow-2xs">
-              <h3 className="text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2">Specializations</h3>
+            <div className="rounded-2xl border border-neutral-200/80 bg-white/85 p-5 shadow-2xs">
+              <h3 className="text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2.5">Specializations</h3>
               <div className="flex flex-wrap gap-1.5">
                 {["AI/ML Integration", "Graphic Design", "Motion Graphics", "3D Modeling", "Multilingual Systems"].map((item) => (
                   <span key={item} className="rounded-md bg-neutral-100 px-2.5 py-1 text-xs font-medium text-neutral-800">
@@ -382,32 +381,32 @@ export default function ResumePage() {
             <IconBriefcase size={15} />
             <span>Internships</span>
           </h2>
-          <div className="space-y-3">
+          <div className="space-y-3.5">
             {/* NeST */}
-            <div className="rounded-xl border border-neutral-200/80 bg-white/80 p-4 shadow-2xs">
+            <div className="rounded-2xl border border-neutral-200/80 bg-white/85 p-5 shadow-2xs">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                 <div>
-                  <h3 className="font-bold text-neutral-900">DevOps with AI – Industry Immersion Program</h3>
+                  <h3 className="font-bold text-neutral-900 text-[16px]">DevOps with AI – Industry Immersion Program</h3>
                   <p className="text-xs font-semibold text-neutral-600">NeST Digital Academy, Kochi</p>
                 </div>
                 <span className="text-xs font-medium text-neutral-500">Feb 2026</span>
               </div>
-              <ul className="mt-2.5 space-y-1 text-sm text-neutral-700 list-disc list-outside pl-4">
+              <ul className="mt-3 space-y-1.5 text-sm text-neutral-700 list-disc list-outside pl-4">
                 <li>Gained hands-on experience with AWS cloud services and Docker containerization for building deployment pipelines.</li>
                 <li>Explored AI-integrated DevOps tooling and end-to-end CI/CD workflows.</li>
               </ul>
             </div>
 
             {/* Luminar */}
-            <div className="rounded-xl border border-neutral-200/80 bg-white/80 p-4 shadow-2xs">
+            <div className="rounded-2xl border border-neutral-200/80 bg-white/85 p-5 shadow-2xs">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                 <div>
-                  <h3 className="font-bold text-neutral-900">Data Science &amp; Deep Learning Intern</h3>
+                  <h3 className="font-bold text-neutral-900 text-[16px]">Data Science &amp; Deep Learning Intern</h3>
                   <p className="text-xs font-semibold text-neutral-600">Luminar Technolab, Kochi</p>
                 </div>
                 <span className="text-xs font-medium text-neutral-500">Jun 2025 · 1 Month</span>
               </div>
-              <ul className="mt-2.5 space-y-1 text-sm text-neutral-700 list-disc list-outside pl-4">
+              <ul className="mt-3 space-y-1.5 text-sm text-neutral-700 list-disc list-outside pl-4">
                 <li>Built and optimized ANNs and CNNs using TensorFlow for image classification, achieving improved accuracy on Food 101 dataset through data augmentation.</li>
                 <li>Designed and deployed a custom deep learning model on Kaggle, completing the full end-to-end AI pipeline from preprocessing to evaluation.</li>
               </ul>
@@ -421,7 +420,7 @@ export default function ResumePage() {
             <IconTrophy size={15} />
             <span>Honors &amp; Hackathon Awards</span>
           </h2>
-          <div className="space-y-2.5 rounded-2xl border border-neutral-200/90 bg-white/85 p-5 shadow-2xs">
+          <div className="space-y-3 rounded-2xl border border-neutral-200/90 bg-white/90 p-5 sm:p-6 shadow-2xs">
             <div className="flex items-start gap-3.5">
               <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-800 text-xs font-bold shadow-2xs">
                 ★
@@ -462,7 +461,7 @@ export default function ResumePage() {
               <IconCertificate size={15} />
               <span>Certifications</span>
             </h2>
-            <div className="rounded-xl border border-neutral-200/80 bg-white/80 p-4 shadow-2xs space-y-2 text-sm text-neutral-800">
+            <div className="rounded-2xl border border-neutral-200/80 bg-white/85 p-5 shadow-2xs space-y-2 text-sm text-neutral-800">
               <p>• <strong>DevOps with AI</strong> — NeST Digital Academy</p>
               <p>• <strong>Google UX Design</strong> — Coursera</p>
               <p>• <strong>Meta Front-End</strong> — Coursera</p>
@@ -476,7 +475,7 @@ export default function ResumePage() {
               <IconUsers size={15} />
               <span>Leadership &amp; Community</span>
             </h2>
-            <div className="rounded-xl border border-neutral-200/80 bg-white/80 p-4 shadow-2xs space-y-2 text-sm text-neutral-800">
+            <div className="rounded-2xl border border-neutral-200/80 bg-white/85 p-5 shadow-2xs space-y-2 text-sm text-neutral-800">
               <p>• <strong>Web Team Lead</strong> — GDG on Campus AJCE</p>
               <p>• <strong>Chief Creative Officer (CCO)</strong> — IEDC AJCE</p>
               <p>• <strong>Tech Lead</strong> — Blankspace</p>
@@ -485,39 +484,39 @@ export default function ResumePage() {
         </div>
 
         {/* ── SECTION: Instant PDF Download Actions ── */}
-        <div className="my-8 grid grid-cols-1 gap-4 sm:grid-cols-2 pt-4 border-t border-neutral-200/80">
+        <div className="my-8 grid grid-cols-1 gap-4 sm:grid-cols-2 pt-6 border-t border-neutral-200/80">
           <a
             href="/resume/Abin_Varghese_Resume.pdf"
             download="Abin_Varghese_Resume.pdf"
-            className="group flex items-center justify-between rounded-xl border border-neutral-200/90 bg-white/95 p-4 shadow-xs transition hover:border-neutral-400 hover:shadow-sm"
+            className="group flex items-center justify-between rounded-2xl border border-neutral-200/90 bg-white/95 p-4.5 shadow-xs transition hover:border-neutral-400 hover:shadow-sm"
           >
             <div className="flex items-center gap-3.5">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 text-white shadow-xs">
-                <IconFileText size={20} stroke={2} />
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-xs">
+                <IconFileText size={22} stroke={2} />
               </div>
               <div className="text-left">
-                <p className="text-xs font-bold text-neutral-900 leading-tight">Download Developer CV</p>
-                <p className="text-[11px] text-neutral-500">Official PDF · Code &amp; Systems</p>
+                <p className="text-sm font-bold text-neutral-900 leading-tight">Download Developer CV</p>
+                <p className="text-xs text-neutral-500 mt-0.5">Official PDF · Code &amp; Systems</p>
               </div>
             </div>
-            <IconDownload size={18} className="text-neutral-400 group-hover:text-neutral-900 transition" />
+            <IconDownload size={20} className="text-neutral-400 group-hover:text-neutral-900 transition" />
           </a>
 
           <a
             href="/resume/Abin-Varghese-Portfolio.pdf"
             download="Abin_Varghese_Designer_Portfolio.pdf"
-            className="group flex items-center justify-between rounded-xl border border-neutral-200/90 bg-white/95 p-4 shadow-xs transition hover:border-neutral-400 hover:shadow-sm"
+            className="group flex items-center justify-between rounded-2xl border border-neutral-200/90 bg-white/95 p-4.5 shadow-xs transition hover:border-neutral-400 hover:shadow-sm"
           >
             <div className="flex items-center gap-3.5">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-rose-500 text-white shadow-xs">
-                <IconPalette size={20} stroke={2} />
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-rose-500 text-white shadow-xs">
+                <IconPalette size={22} stroke={2} />
               </div>
               <div className="text-left">
-                <p className="text-xs font-bold text-neutral-900 leading-tight">Download Design Deck</p>
-                <p className="text-[11px] text-neutral-500">Official PDF · UI/UX &amp; Motion</p>
+                <p className="text-sm font-bold text-neutral-900 leading-tight">Download Design Deck</p>
+                <p className="text-xs text-neutral-500 mt-0.5">Official PDF · UI/UX &amp; Motion</p>
               </div>
             </div>
-            <IconDownload size={18} className="text-neutral-400 group-hover:text-neutral-900 transition" />
+            <IconDownload size={20} className="text-neutral-400 group-hover:text-neutral-900 transition" />
           </a>
         </div>
 
