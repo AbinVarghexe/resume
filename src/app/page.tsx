@@ -46,7 +46,7 @@ export default function ResumePage() {
       </div>
 
       {/* ── 2. Profile Avatar (Rounded Hexagonal Shape) & Identity ── */}
-      <div className="mt-8 sm:mt-10 flex flex-col items-center text-center">
+      <div className="mt-4 sm:mt-8 md:mt-10 flex flex-col items-center text-center">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -54,7 +54,7 @@ export default function ResumePage() {
           className="relative flex items-center justify-center"
         >
           {/* 8-Lobed Scalloped Avatar Container */}
-          <div className="relative w-44 h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 filter drop-shadow-[0_16px_32px_rgba(0,0,0,0.20)]">
+          <div className="relative w-32 h-32 sm:w-44 sm:h-44 md:w-48 md:h-48 filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)] sm:drop-shadow-[0_16px_32px_rgba(0,0,0,0.20)]">
             {/* White Outer Border Mask Layer */}
             <div 
               className="absolute inset-0 bg-white"
@@ -72,7 +72,7 @@ export default function ResumePage() {
 
             {/* Inset Profile Photo Layer */}
             <div 
-              className="absolute inset-[4px] bg-[#f5f2eb] overflow-hidden"
+              className="absolute inset-[3px] sm:inset-[4px] bg-[#f5f2eb] overflow-hidden"
               style={{
                 WebkitMaskImage: "url(/avatar-mask.png)",
                 maskImage: "url(/avatar-mask.png)",
@@ -100,7 +100,7 @@ export default function ResumePage() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-neutral-950 text-center leading-[1.08]"
+          className="mt-4 sm:mt-5 text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-neutral-950 text-center leading-[1.08]"
         >
           Abin Varghese
         </motion.h1>
@@ -110,11 +110,11 @@ export default function ResumePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.25 }}
-          className="mt-2 text-base sm:text-lg md:text-xl font-medium text-neutral-600 text-center flex items-center justify-center flex-wrap gap-1.5"
+          className="mt-1.5 sm:mt-2 text-sm sm:text-lg md:text-xl font-medium text-neutral-600 text-center flex items-center justify-center flex-wrap gap-1 sm:gap-1.5 px-2"
         >
           <span>Aspiring Software Engineer</span>
           <span className="inline-flex items-center align-middle p-0.5 rounded bg-neutral-100 border border-neutral-300">
-            <IconStack2 size={16} stroke={2.2} className="text-black" />
+            <IconStack2 size={15} stroke={2.2} className="text-black" />
           </span>
           <span>Full-Stack Builder</span>
         </motion.p>
@@ -124,20 +124,20 @@ export default function ResumePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.3 }}
-          className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-xs text-neutral-600 font-medium"
+          className="mt-2.5 sm:mt-3 flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 gap-y-1 text-xs text-neutral-600 font-medium px-2"
         >
-          <a href="mailto:abinnnvarghese@gmail.com" className="hover:text-neutral-900 transition flex items-center gap-1">
-            <IconMail size={14} className="text-black" />
+          <a href="mailto:abinnnvarghese@gmail.com" className="hover:text-neutral-900 transition flex items-center gap-1 break-all">
+            <IconMail size={13} className="text-black shrink-0" />
             <span>abinnnvarghese@gmail.com</span>
           </a>
-          <span className="text-neutral-300">•</span>
-          <a href="tel:+916282824259" className="hover:text-neutral-900 transition flex items-center gap-1">
-            <IconPhone size={14} className="text-black" />
+          <span className="hidden xs:inline text-neutral-300">•</span>
+          <a href="tel:+916282824259" className="hover:text-neutral-900 transition flex items-center gap-1 whitespace-nowrap">
+            <IconPhone size={13} className="text-black shrink-0" />
             <span>+91 6282824259</span>
           </a>
-          <span className="text-neutral-300">•</span>
-          <span className="flex items-center gap-1">
-            <IconMapPin size={14} className="text-black" />
+          <span className="hidden xs:inline text-neutral-300">•</span>
+          <span className="flex items-center gap-1 whitespace-nowrap">
+            <IconMapPin size={13} className="text-black shrink-0" />
             <span>Kerala, India</span>
           </span>
         </motion.div>
@@ -503,22 +503,22 @@ export default function ResumePage() {
         <hr className="border-neutral-200/90" />
 
         {/* ── SECTION: Instant Developer CV Action (Design Deck Removed) ── */}
-        <div className="my-8 pt-2 flex justify-center">
+        <div className="my-6 sm:my-8 pt-1 sm:pt-2 flex justify-center">
           <a
             href="/resume/Abin_Varghese_Resume.pdf"
             download="Abin_Varghese_Resume.pdf"
-            className="group inline-flex items-center justify-between gap-6 sm:gap-10 rounded-2xl border border-neutral-300/90 bg-white/95 px-6 py-4.5 shadow-2xs transition hover:border-black hover:shadow-xs w-full max-w-md"
+            className="group inline-flex items-center justify-between gap-3 sm:gap-8 rounded-xl sm:rounded-2xl border border-neutral-300/90 bg-white/95 px-4 py-3.5 sm:px-6 sm:py-4.5 shadow-2xs transition hover:border-black hover:shadow-xs w-full max-w-md"
           >
-            <div className="flex items-center gap-3.5">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-black text-white shadow-2xs">
-                <IconFileText size={22} stroke={2} className="text-white" />
+            <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
+              <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-lg sm:rounded-xl bg-black text-white shadow-2xs">
+                <IconFileText size={20} stroke={2} className="text-white" />
               </div>
-              <div className="text-left">
-                <p className="text-sm font-bold text-neutral-900 leading-tight">Download Developer CV</p>
-                <p className="text-xs text-neutral-500 mt-0.5">Official PDF Document · Code &amp; Systems</p>
+              <div className="text-left min-w-0">
+                <p className="text-sm font-bold text-neutral-900 leading-tight truncate">Download Developer CV</p>
+                <p className="text-[11px] sm:text-xs text-neutral-500 mt-0.5 truncate">Official PDF Document · Code &amp; Systems</p>
               </div>
             </div>
-            <IconDownload size={20} className="text-neutral-500 group-hover:text-black transition" />
+            <IconDownload size={20} className="text-neutral-500 group-hover:text-black transition shrink-0" />
           </a>
         </div>
 

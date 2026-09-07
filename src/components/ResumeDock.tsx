@@ -90,8 +90,8 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
   ];
 
   return (
-    <div className="my-8 flex justify-center sm:my-10">
-      <div className="relative inline-flex items-center gap-2 sm:gap-3 rounded-2xl border border-neutral-200/90 bg-white/90 p-2 sm:p-2.5 shadow-[0_12px_36px_-6px_rgba(0,0,0,0.1),0_4px_12px_rgba(0,0,0,0.04)] backdrop-blur-md">
+    <div className="my-6 sm:my-10 flex justify-center px-1">
+      <div className="relative inline-flex max-w-full items-center gap-1.5 sm:gap-3 overflow-x-auto rounded-2xl border border-neutral-200/90 bg-white/95 p-1.5 sm:p-2.5 shadow-[0_12px_36px_-6px_rgba(0,0,0,0.1),0_4px_12px_rgba(0,0,0,0.04)] backdrop-blur-md no-scrollbar">
         {dockItems.map((item) => {
           const Icon = item.icon;
           const isHovered = hoveredId === item.id;
