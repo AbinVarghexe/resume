@@ -53,8 +53,8 @@ export default function ResumePage() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="relative flex items-center justify-center"
         >
-          {/* 8-Petal Scalloped Flower Avatar Container */}
-          <div className="relative w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 filter drop-shadow-[0_14px_30px_rgba(0,0,0,0.18)]">
+          {/* 8-Lobed Scalloped Avatar Container */}
+          <div className="relative w-40 h-40 sm:w-44 sm:h-44 md:w-48 md:h-48 filter drop-shadow-[0_16px_32px_rgba(0,0,0,0.22)]">
             {/* White Outer Border Mask Layer */}
             <div 
               className="absolute inset-0 bg-white"
