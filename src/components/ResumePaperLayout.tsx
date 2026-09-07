@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 interface ResumePaperLayoutProps {
   children: React.ReactNode;
@@ -8,48 +9,53 @@ interface ResumePaperLayoutProps {
 
 export default function ResumePaperLayout({ children }: ResumePaperLayoutProps) {
   return (
-    <div className="relative min-h-screen w-full bg-[#fbf9f4] text-[#171717] antialiased selection:bg-neutral-900 selection:text-white">
-      {/* ── 1. Drafting / Graph Notebook Grid Overlay ── */}
-      <div 
-        className="pointer-events-none fixed inset-0 z-0 opacity-40"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(0, 0, 0, 0.055) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.055) 1px, transparent 1px)
-          `,
-          backgroundSize: "28px 28px",
-        }}
-      />
+    <div className="relative min-h-screen w-full selection:bg-neutral-900 selection:text-white">
+      {/* ── 1. Fixed Cutting Mat Desk Background ── */}
+      <div className="fixed inset-0 z-0 h-screen w-screen overflow-hidden pointer-events-none">
+        <Image
+          src="/desk-bg.jpg"
+          alt="Cutting Mat Desk Background"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+        {/* Subtle ambient lighting vignette overlay */}
+        <div className="absolute inset-0 bg-black/10 mix-blend-multiply" />
+      </div>
 
-      {/* ── 2. Macro Structural Grid Lines (every 5 cells) ── */}
-      <div 
-        className="pointer-events-none fixed inset-0 z-0 opacity-20"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: "140px 140px",
-        }}
-      />
+      {/* ── 2. Scrollable Viewport Container ── */}
+      <div className="relative z-10 min-h-screen w-full px-3 py-6 sm:px-6 sm:py-12 md:py-16">
+        {/* ── 3. Centered Physical Paper Document ── */}
+        <div className="relative mx-auto max-w-2xl overflow-hidden rounded-2xl sm:rounded-3xl border border-[#e5e1d3] bg-[#faf8f4] p-6 sm:p-10 md:p-12 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.45),0_12px_28px_-5px_rgba(0,0,0,0.25)] ring-1 ring-black/5 backdrop-blur-2xs">
+          {/* Paper Texture: Tactile Fiber Noise Overlay */}
+          <div 
+            className="pointer-events-none absolute inset-0 z-0 opacity-[0.065] mix-blend-multiply"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+              backgroundSize: "120px 120px",
+            }}
+          />
 
-      {/* ── 3. Tactile Paper Fiber Noise Grain Filter ── */}
-      <div 
-        className="pointer-events-none fixed inset-0 z-0 opacity-[0.06] mix-blend-multiply"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          backgroundSize: "120px 120px",
-        }}
-      />
+          {/* Paper Grid: Fine Notebook Drafting Grid on the paper */}
+          <div 
+            className="pointer-events-none absolute inset-0 z-0 opacity-30"
+            style={{
+              backgroundImage: `
+                linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px)
+              `,
+              backgroundSize: "24px 24px",
+            }}
+          />
 
-      {/* ── 4. Ambient Paper Perimeter Vignette ── */}
-      <div 
-        className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.035)_100%)]" 
-      />
+          {/* Subtle Inner Paper Edge Glow / Bevel */}
+          <div className="pointer-events-none absolute inset-0 z-0 rounded-2xl sm:rounded-3xl shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),inset_0_-1px_2px_rgba(0,0,0,0.05)]" />
 
-      {/* ── 5. Main Content Container ── */}
-      <div className="relative z-10 mx-auto max-w-2xl px-5 py-12 sm:px-8 sm:py-16 md:py-20">
-        {children}
+          {/* Document Content */}
+          <div className="relative z-10">
+            {children}
+          </div>
+        </div>
       </div>
     </div>
   );

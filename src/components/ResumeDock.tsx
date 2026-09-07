@@ -2,17 +2,19 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Terminal, 
-  Globe, 
-  PenTool, 
-  Layers, 
-  Send, 
-  Mail, 
-  FileDown, 
-  Github,
-  Calendar
-} from "lucide-react";
+import {
+  IconTerminal2,
+  IconWorld,
+  IconBrandFigma,
+  IconBrandGithub,
+  IconStack2,
+  IconBrandBehance,
+  IconCalendar,
+  IconBrandLinkedin,
+  IconBrandTelegram,
+  IconMail,
+  IconFileDownload,
+} from "@tabler/icons-react";
 
 interface DockItem {
   id: string;
@@ -20,8 +22,7 @@ interface DockItem {
   sublabel: string;
   bg: string;
   textColor?: string;
-  icon?: React.ComponentType<{ className?: string }>;
-  customGlyph?: React.ReactNode;
+  icon: React.ComponentType<{ className?: string; size?: number | string; stroke?: number | string }>;
   href?: string;
   onClick?: () => void;
 }
@@ -37,10 +38,10 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
     {
       id: "terminal",
       label: "Projects & Code",
-      sublabel: "Interactive Web & Engineering",
+      sublabel: "Interactive Web & Systems",
       bg: "bg-[#eab308]",
       textColor: "text-neutral-900",
-      customGlyph: <span className="font-mono text-sm font-black tracking-tighter">&gt;_</span>,
+      icon: IconTerminal2,
       href: "https://abinvarghese.app/projects",
     },
     {
@@ -48,15 +49,15 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
       label: "Main Website",
       sublabel: "abinvarghese.app",
       bg: "bg-[#10b981]",
-      icon: Globe,
+      icon: IconWorld,
       href: "https://abinvarghese.app",
     },
     {
       id: "design",
-      label: "Design Systems",
-      sublabel: "UI/UX & Brand Archives",
+      label: "UI/UX & Figma",
+      sublabel: "Design Archives & Systems",
       bg: "bg-[#18181b]",
-      icon: PenTool,
+      icon: IconBrandFigma,
       href: "https://abinvarghese.app/about",
     },
     {
@@ -64,7 +65,7 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
       label: "GitHub",
       sublabel: "@AbinVarghexe",
       bg: "bg-[#ea580c]",
-      icon: Github,
+      icon: IconBrandGithub,
       href: "https://github.com/AbinVarghexe",
     },
     {
@@ -72,7 +73,7 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
       label: "Creative Work",
       sublabel: "3D & Motion Graphics",
       bg: "bg-[#0284c7]",
-      icon: Layers,
+      icon: IconStack2,
       href: "https://abinvarghese.app/#creative",
     },
     {
@@ -80,7 +81,7 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
       label: "Behance",
       sublabel: "toabinvarghese",
       bg: "bg-[#09090b]",
-      customGlyph: <span className="text-xs font-black tracking-tight">Bē</span>,
+      icon: IconBrandBehance,
       href: "https://www.behance.net/toabinvarghese",
     },
     {
@@ -88,7 +89,7 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
       label: "Book a Call",
       sublabel: "1:1 Chat via Cal.com",
       bg: "bg-[#6366f1]",
-      icon: Calendar,
+      icon: IconCalendar,
       href: "https://cal.com/toabinvarghese",
     },
     {
@@ -96,7 +97,7 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
       label: "LinkedIn",
       sublabel: "in/toabinvarghese",
       bg: "bg-[#0a66c2]",
-      customGlyph: <span className="text-xs font-bold font-sans">in</span>,
+      icon: IconBrandLinkedin,
       href: "https://www.linkedin.com/in/toabinvarghese",
     },
     {
@@ -104,7 +105,7 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
       label: "Telegram",
       sublabel: "@toabinvarghese",
       bg: "bg-[#229ed9]",
-      icon: Send,
+      icon: IconBrandTelegram,
       href: "https://t.me/toabinvarghese",
     },
     {
@@ -112,7 +113,7 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
       label: "Email",
       sublabel: "abinvarghesem04@gmail.com",
       bg: "bg-[#38bdf8]",
-      icon: Mail,
+      icon: IconMail,
       href: "mailto:abinvarghesem04@gmail.com",
     },
     {
@@ -120,14 +121,14 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
       label: "Download Resumes",
       sublabel: "Developer CV & Designer Deck",
       bg: "bg-[#4f46e5]",
-      icon: FileDown,
+      icon: IconFileDownload,
       onClick: onOpenResumeModal,
     },
   ];
 
   return (
     <div className="my-8 flex justify-center sm:my-10">
-      <div className="relative inline-flex items-center gap-1.5 sm:gap-2.5 rounded-2xl border border-neutral-200/90 bg-white/80 p-2 sm:p-2.5 shadow-[0_12px_36px_-6px_rgba(0,0,0,0.09),0_4px_12px_rgba(0,0,0,0.03)] backdrop-blur-md">
+      <div className="relative inline-flex items-center gap-1.5 sm:gap-2.5 rounded-2xl border border-neutral-200/90 bg-white/90 p-2 sm:p-2.5 shadow-[0_12px_36px_-6px_rgba(0,0,0,0.1),0_4px_12px_rgba(0,0,0,0.04)] backdrop-blur-md">
         {dockItems.map((item) => {
           const Icon = item.icon;
           const isHovered = hoveredId === item.id;
@@ -147,7 +148,7 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
                 {isHovered && (
                   <motion.div
                     initial={{ opacity: 0, y: 6, scale: 0.92 }}
-                    animate={{ opacity: 1, y: -42, scale: 1 }}
+                    animate={{ opacity: 1, y: -44, scale: 1 }}
                     exit={{ opacity: 0, y: 4, scale: 0.92 }}
                     transition={{ duration: 0.15 }}
                     className="pointer-events-none absolute z-50 whitespace-nowrap rounded-lg border border-neutral-800 bg-neutral-900 px-2.5 py-1 text-center shadow-xl"
@@ -163,11 +164,7 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
               <div
                 className={`flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl sm:rounded-2xl ${item.bg} ${item.textColor || "text-white"} shadow-[0_2px_8px_rgba(0,0,0,0.12)] ring-1 ring-black/5 transition-transform`}
               >
-                {item.customGlyph ? (
-                  item.customGlyph
-                ) : Icon ? (
-                  <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
-                ) : null}
+                <Icon size={20} stroke={2} className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
             </motion.div>
           );
