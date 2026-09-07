@@ -157,16 +157,16 @@ export default function ResumePage() {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.45 }}
-        className="space-y-8 text-[15px] leading-relaxed text-neutral-700 max-w-3xl lg:max-w-4xl mx-auto pt-4"
+        className="space-y-6 sm:space-y-8 text-sm sm:text-[15px] leading-relaxed text-neutral-700 max-w-3xl lg:max-w-4xl mx-auto pt-2 sm:pt-4"
       >
         {/* ── SECTION: Summary ── */}
-        <section className="space-y-2.5">
+        <section className="space-y-2">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
-            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
+            <h2 className="text-xs sm:text-sm font-black uppercase tracking-wider text-neutral-950">
               Summary
             </h2>
           </div>
-          <p className="text-[15px] leading-relaxed text-neutral-800 pt-1">
+          <p className="text-sm sm:text-[15px] leading-relaxed text-neutral-800 pt-0.5">
             Final-year Computer Science student with experience in <strong>Full Stack Development</strong>, <strong>React</strong>, <strong>Next.js</strong>, <strong>Firebase</strong>, and <strong>AWS</strong>. Built multilingual web platforms, admin dashboards, and client-facing applications through freelancing and professional work. Passionate about creating scalable digital products with strong user experience and performance optimization.
           </p>
         </section>
@@ -175,23 +175,23 @@ export default function ResumePage() {
         <hr className="border-neutral-200/90" />
 
         {/* ── SECTION: Education ── */}
-        <section className="space-y-3">
+        <section className="space-y-2.5 sm:space-y-3">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
-            <IconSchool size={16} className="text-black" />
-            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
+            <IconSchool size={16} className="text-black shrink-0" />
+            <h2 className="text-xs sm:text-sm font-black uppercase tracking-wider text-neutral-950">
               Education
             </h2>
           </div>
-          <div className="pt-1">
-            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-              <h3 className="font-bold text-neutral-900 text-[16px]">B.Tech in Computer Science &amp; Engineering</h3>
-              <span className="text-xs font-semibold text-neutral-500">2023 – Present</span>
+          <div className="pt-0.5">
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-1">
+              <h3 className="font-bold text-neutral-900 text-sm sm:text-[16px]">B.Tech in Computer Science &amp; Engineering</h3>
+              <span className="text-[11px] sm:text-xs font-semibold text-neutral-500">2023 – Present</span>
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mt-0.5">
-              <p className="text-sm text-neutral-700 font-medium">
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-1 mt-0.5">
+              <p className="text-xs sm:text-sm text-neutral-700 font-medium">
                 Amal Jyothi College of Engineering (Autonomous), Kanjirappally
               </p>
-              <span className="text-xs font-bold text-neutral-900">CGPA: 7.39</span>
+              <span className="text-[11px] sm:text-xs font-bold text-neutral-900">CGPA: 7.39</span>
             </div>
           </div>
         </section>
@@ -200,25 +200,25 @@ export default function ResumePage() {
         <hr className="border-neutral-200/90" />
 
         {/* ── SECTION: Work Experience ── */}
-        <section className="space-y-5">
+        <section className="space-y-4 sm:space-y-5">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
-            <IconBriefcase size={16} className="text-black" />
-            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
+            <IconBriefcase size={16} className="text-black shrink-0" />
+            <h2 className="text-xs sm:text-sm font-black uppercase tracking-wider text-neutral-950">
               Work Experience
             </h2>
           </div>
 
-          <div className="space-y-6 pt-1">
+          <div className="space-y-5 sm:space-y-6 pt-0.5">
             {/* INCIAL */}
-            <div className="space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+            <div className="space-y-1.5 sm:space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-1">
                 <div>
-                  <h3 className="font-bold text-neutral-900 text-[16px]">INCIAL</h3>
+                  <h3 className="font-bold text-neutral-900 text-sm sm:text-[16px]">INCIAL</h3>
                   <p className="text-xs font-semibold text-neutral-800">Frontend Developer &amp; UI/UX Designer</p>
                 </div>
-                <span className="text-xs font-medium text-neutral-500">Mar 2024 – Present</span>
+                <span className="text-[11px] sm:text-xs font-medium text-neutral-500">Mar 2024 – Present</span>
               </div>
-              <ul className="space-y-1.5 text-sm text-neutral-700 list-disc list-outside pl-4 pt-1">
+              <ul className="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-neutral-700 list-disc list-outside pl-4 pt-1">
                 <li>
                   Built and shipped full-stack web products for clients using React, Next.js, and Tailwind CSS, reducing design-to-dev handoff friction through Figma-aligned components.
                 </li>
@@ -232,15 +232,15 @@ export default function ResumePage() {
             <div className="border-t border-dashed border-neutral-200/80" />
 
             {/* FREELANCE */}
-            <div className="space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+            <div className="space-y-1.5 sm:space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-1">
                 <div>
-                  <h3 className="font-bold text-neutral-900 text-[16px]">Freelance</h3>
+                  <h3 className="font-bold text-neutral-900 text-sm sm:text-[16px]">Freelance</h3>
                   <p className="text-xs font-semibold text-neutral-800">Frontend Developer</p>
                 </div>
-                <span className="text-xs font-medium text-neutral-500">2023 – Present</span>
+                <span className="text-[11px] sm:text-xs font-medium text-neutral-500">2023 – Present</span>
               </div>
-              <ul className="space-y-1.5 text-sm text-neutral-700 list-disc list-outside pl-4 pt-1">
+              <ul className="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-neutral-700 list-disc list-outside pl-4 pt-1">
                 <li>
                   Developed and launched 5+ web applications with a 90% client satisfaction rate across diverse domains.
                 </li>
@@ -256,23 +256,23 @@ export default function ResumePage() {
         <hr className="border-neutral-200/90" />
 
         {/* ── SECTION: Technical Projects ── */}
-        <section className="space-y-5">
+        <section className="space-y-4 sm:space-y-5">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
-            <IconCode size={16} className="text-black" />
-            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
+            <IconCode size={16} className="text-black shrink-0" />
+            <h2 className="text-xs sm:text-sm font-black uppercase tracking-wider text-neutral-950">
               Featured Projects
             </h2>
           </div>
 
-          <div className="space-y-6 pt-1">
+          <div className="space-y-5 sm:space-y-6 pt-0.5">
             {/* Project 1: Blaupunkt EV */}
-            <div className="space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                <div className="flex items-center gap-2">
-                  <h3 className="font-bold text-neutral-900 text-[16px]">Blaupunkt EV</h3>
-                  <span className="text-xs text-neutral-500 font-medium">(INCIAL)</span>
+            <div className="space-y-1.5 sm:space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-1">
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <h3 className="font-bold text-neutral-900 text-sm sm:text-[16px]">Blaupunkt EV</h3>
+                  <span className="text-[11px] sm:text-xs text-neutral-500 font-medium">(INCIAL)</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs">
+                <div className="flex items-center gap-3 text-[11px] sm:text-xs">
                   <a 
                     href="https://blaupunkt-main.vercel.app" 
                     target="_blank" 
@@ -280,15 +280,15 @@ export default function ResumePage() {
                     className="inline-flex items-center gap-1 font-semibold text-neutral-900 hover:underline"
                   >
                     <span>Live Demo</span>
-                    <IconExternalLink size={13} className="text-black" />
+                    <IconExternalLink size={12} className="text-black" />
                   </a>
                   <span className="text-neutral-400">2025</span>
                 </div>
               </div>
-              <p className="text-sm text-neutral-700">
+              <p className="text-xs sm:text-sm text-neutral-700">
                 Built a localization-ready product catalog and contact platform serving international markets with Resend-powered email workflows.
               </p>
-              <p className="text-xs text-neutral-500 pt-0.5">
+              <p className="text-[11px] sm:text-xs text-neutral-500 pt-0.5">
                 <strong className="text-neutral-800">Tech Stack:</strong> Next.js, React, Tailwind CSS, next-intl, Framer Motion, PDF-lib.
               </p>
             </div>
@@ -297,13 +297,13 @@ export default function ResumePage() {
             <div className="border-t border-dashed border-neutral-200/80" />
 
             {/* Project 2: LightSuvara */}
-            <div className="space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                <div className="flex items-center gap-2">
-                  <h3 className="font-bold text-neutral-900 text-[16px]">LightSuvara — Educational Admin Dashboard</h3>
-                  <span className="text-xs text-neutral-500 font-medium">(Team Project)</span>
+            <div className="space-y-1.5 sm:space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-1">
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <h3 className="font-bold text-neutral-900 text-sm sm:text-[16px]">LightSuvara — Educational Admin Dashboard</h3>
+                  <span className="text-[11px] sm:text-xs text-neutral-500 font-medium">(Team Project)</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs">
+                <div className="flex items-center gap-3 text-[11px] sm:text-xs">
                   <a 
                     href="https://light-suvara-web-app.vercel.app" 
                     target="_blank" 
@@ -311,15 +311,15 @@ export default function ResumePage() {
                     className="inline-flex items-center gap-1 font-semibold text-neutral-900 hover:underline"
                   >
                     <span>Live Demo</span>
-                    <IconExternalLink size={13} className="text-black" />
+                    <IconExternalLink size={12} className="text-black" />
                   </a>
                   <span className="text-neutral-400">2026</span>
                 </div>
               </div>
-              <p className="text-sm text-neutral-700">
+              <p className="text-xs sm:text-sm text-neutral-700">
                 Built the Web Admin Panel managing 1,000+ users across schools, animators, and admins with role-based access, event workflows, grading, and PDF report generation.
               </p>
-              <p className="text-xs text-neutral-500 pt-0.5">
+              <p className="text-[11px] sm:text-xs text-neutral-500 pt-0.5">
                 <strong className="text-neutral-800">Tech Stack:</strong> React, TypeScript, Tailwind CSS, Firebase, Vite, Shadcn UI, Recharts.
               </p>
             </div>
@@ -328,13 +328,13 @@ export default function ResumePage() {
             <div className="border-t border-dashed border-neutral-200/80" />
 
             {/* Project 3: Intern-Hub */}
-            <div className="space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                <div className="flex items-center gap-2">
-                  <h3 className="font-bold text-neutral-900 text-[16px]">Intern-Hub — Centralized Internship Platform</h3>
-                  <span className="text-xs text-neutral-500 font-medium">(INCIAL)</span>
+            <div className="space-y-1.5 sm:space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-1">
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <h3 className="font-bold text-neutral-900 text-sm sm:text-[16px]">Intern-Hub — Centralized Internship Platform</h3>
+                  <span className="text-[11px] sm:text-xs text-neutral-500 font-medium">(INCIAL)</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs">
+                <div className="flex items-center gap-3 text-[11px] sm:text-xs">
                   <a 
                     href="https://intern-hub-sable.vercel.app" 
                     target="_blank" 
@@ -342,15 +342,15 @@ export default function ResumePage() {
                     className="inline-flex items-center gap-1 font-semibold text-neutral-900 hover:underline"
                   >
                     <span>Live Demo</span>
-                    <IconExternalLink size={13} className="text-black" />
+                    <IconExternalLink size={12} className="text-black" />
                   </a>
                   <span className="text-neutral-400">2024</span>
                 </div>
               </div>
-              <p className="text-sm text-neutral-700">
+              <p className="text-xs sm:text-sm text-neutral-700">
                 Built a centralized internship hub for TBI AJCE students, onboarding 100+ users on launch.
               </p>
-              <p className="text-xs text-neutral-500 pt-0.5">
+              <p className="text-[11px] sm:text-xs text-neutral-500 pt-0.5">
                 <strong className="text-neutral-800">Tech Stack:</strong> HTML, CSS, JavaScript.
               </p>
             </div>
@@ -361,27 +361,27 @@ export default function ResumePage() {
         <hr className="border-neutral-200/90" />
 
         {/* ── SECTION: Technical Skills ── */}
-        <section className="space-y-3.5">
+        <section className="space-y-3 sm:space-y-3.5">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
-            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
+            <h2 className="text-xs sm:text-sm font-black uppercase tracking-wider text-neutral-950">
               Skills &amp; Capabilities
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 pt-1 text-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 sm:gap-y-4 pt-0.5 text-xs sm:text-sm">
             <div>
-              <span className="font-bold text-neutral-900 block mb-1">Languages &amp; Frameworks:</span>
+              <span className="font-bold text-neutral-900 block mb-0.5">Languages &amp; Frameworks:</span>
               <p className="text-neutral-700">React, Next.js, JavaScript, TypeScript, Tailwind CSS, Python, C</p>
             </div>
             <div>
-              <span className="font-bold text-neutral-900 block mb-1">Design &amp; Creative:</span>
+              <span className="font-bold text-neutral-900 block mb-0.5">Design &amp; Creative:</span>
               <p className="text-neutral-700">Figma, UI/UX Design, Photoshop, Illustrator, Blender, Canva, Adobe Suite</p>
             </div>
             <div>
-              <span className="font-bold text-neutral-900 block mb-1">Dev Tools &amp; Cloud:</span>
+              <span className="font-bold text-neutral-900 block mb-0.5">Dev Tools &amp; Cloud:</span>
               <p className="text-neutral-700">Git, Docker, AWS, Firebase, Vercel, Vite, Postman</p>
             </div>
             <div>
-              <span className="font-bold text-neutral-900 block mb-1">Specializations:</span>
+              <span className="font-bold text-neutral-900 block mb-0.5">Specializations:</span>
               <p className="text-neutral-700">AI/ML Integration, Graphic Design, Motion Graphics, 3D Modeling, Multilingual Systems</p>
             </div>
           </div>
@@ -391,25 +391,25 @@ export default function ResumePage() {
         <hr className="border-neutral-200/90" />
 
         {/* ── SECTION: Internships ── */}
-        <section className="space-y-4">
+        <section className="space-y-3.5 sm:space-y-4">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
-            <IconBriefcase size={16} className="text-black" />
-            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
+            <IconBriefcase size={16} className="text-black shrink-0" />
+            <h2 className="text-xs sm:text-sm font-black uppercase tracking-wider text-neutral-950">
               Internships
             </h2>
           </div>
 
-          <div className="space-y-5 pt-1">
+          <div className="space-y-4 sm:space-y-5 pt-0.5">
             {/* NeST */}
-            <div className="space-y-1.5">
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+            <div className="space-y-1 sm:space-y-1.5">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-1">
                 <div>
-                  <h3 className="font-bold text-neutral-900 text-[15px]">DevOps with AI – Industry Immersion Program</h3>
+                  <h3 className="font-bold text-neutral-900 text-sm sm:text-[15px]">DevOps with AI – Industry Immersion Program</h3>
                   <p className="text-xs text-neutral-600 font-medium">NeST Digital Academy, Kochi</p>
                 </div>
-                <span className="text-xs font-medium text-neutral-500">Feb 2026</span>
+                <span className="text-[11px] sm:text-xs font-medium text-neutral-500">Feb 2026</span>
               </div>
-              <ul className="space-y-1 text-sm text-neutral-700 list-disc list-outside pl-4 pt-1">
+              <ul className="space-y-1 text-xs sm:text-sm text-neutral-700 list-disc list-outside pl-4 pt-1">
                 <li>Gained hands-on experience with AWS cloud services and Docker containerization for building deployment pipelines.</li>
                 <li>Explored AI-integrated DevOps tooling and end-to-end CI/CD workflows.</li>
               </ul>
@@ -419,15 +419,15 @@ export default function ResumePage() {
             <div className="border-t border-dashed border-neutral-200/80" />
 
             {/* Luminar */}
-            <div className="space-y-1.5">
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+            <div className="space-y-1 sm:space-y-1.5">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-1">
                 <div>
-                  <h3 className="font-bold text-neutral-900 text-[15px]">Data Science &amp; Deep Learning Intern</h3>
+                  <h3 className="font-bold text-neutral-900 text-sm sm:text-[15px]">Data Science &amp; Deep Learning Intern</h3>
                   <p className="text-xs text-neutral-600 font-medium">Luminar Technolab, Kochi</p>
                 </div>
-                <span className="text-xs font-medium text-neutral-500">Jun 2025 · 1 Month</span>
+                <span className="text-[11px] sm:text-xs font-medium text-neutral-500">Jun 2025 · 1 Month</span>
               </div>
-              <ul className="space-y-1 text-sm text-neutral-700 list-disc list-outside pl-4 pt-1">
+              <ul className="space-y-1 text-xs sm:text-sm text-neutral-700 list-disc list-outside pl-4 pt-1">
                 <li>Built and optimized ANNs and CNNs using TensorFlow for image classification, achieving improved accuracy on Food 101 dataset through data augmentation.</li>
                 <li>Designed and deployed a custom deep learning model on Kaggle, completing the full end-to-end AI pipeline from preprocessing to evaluation.</li>
               </ul>
@@ -439,14 +439,14 @@ export default function ResumePage() {
         <hr className="border-neutral-200/90" />
 
         {/* ── SECTION: Achievements & Awards ── */}
-        <section className="space-y-3">
+        <section className="space-y-2.5 sm:space-y-3">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
-            <IconTrophy size={16} className="text-black" />
-            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
+            <IconTrophy size={16} className="text-black shrink-0" />
+            <h2 className="text-xs sm:text-sm font-black uppercase tracking-wider text-neutral-950">
               Honors &amp; Hackathon Awards
             </h2>
           </div>
-          <ul className="space-y-2.5 text-sm text-neutral-700 list-disc list-outside pl-4 pt-1">
+          <ul className="space-y-2 text-xs sm:text-sm text-neutral-700 list-disc list-outside pl-4 pt-0.5">
             <li>
               <strong className="text-neutral-900">Best Mission Concept Award (Senior Category):</strong>{" "}
               NASA Space Apps Challenge 2025, Kanjirappally Local Chapter; built an AI model to classify exoplanets from satellite/telescope data as Team Blankspace.
@@ -466,32 +466,32 @@ export default function ResumePage() {
         <hr className="border-neutral-200/90" />
 
         {/* ── SECTION: Certifications & Leadership ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 pt-0.5">
           {/* Certifications */}
-          <section className="space-y-2.5">
+          <section className="space-y-2 sm:space-y-2.5">
             <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
-              <IconCertificate size={16} className="text-black" />
-              <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
+              <IconCertificate size={16} className="text-black shrink-0" />
+              <h2 className="text-xs sm:text-sm font-black uppercase tracking-wider text-neutral-950">
                 Certifications
               </h2>
             </div>
-            <ul className="space-y-1.5 text-sm text-neutral-700 list-disc list-outside pl-4 pt-1">
+            <ul className="space-y-1 text-xs sm:text-sm text-neutral-700 list-disc list-outside pl-4 pt-0.5">
               <li><strong>DevOps with AI</strong> — NeST Digital Academy</li>
               <li><strong>Google UX Design</strong> — Coursera</li>
-              <li><strong>Meta Front-End</strong> — Coursera</li>
-              <li><strong>Data Science</strong> — Coursera</li>
+              <li><strong>Build a Modern Web App on AWS</strong> — Coursera</li>
+              <li><strong>Postman API Fundamentals</strong> — Postman</li>
             </ul>
           </section>
 
-          {/* Volunteering */}
-          <section className="space-y-2.5">
+          {/* Leadership */}
+          <section className="space-y-2 sm:space-y-2.5">
             <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
-              <IconUsers size={16} className="text-black" />
-              <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
+              <IconUsers size={16} className="text-black shrink-0" />
+              <h2 className="text-xs sm:text-sm font-black uppercase tracking-wider text-neutral-950">
                 Leadership &amp; Community
               </h2>
             </div>
-            <ul className="space-y-1.5 text-sm text-neutral-700 list-disc list-outside pl-4 pt-1">
+            <ul className="space-y-1 text-xs sm:text-sm text-neutral-700 list-disc list-outside pl-4 pt-0.5">
               <li><strong>Web Team Lead</strong> — GDG on Campus AJCE</li>
               <li><strong>Chief Creative Officer (CCO)</strong> — IEDC AJCE</li>
               <li><strong>Tech Lead</strong> — Blankspace</li>
@@ -523,18 +523,18 @@ export default function ResumePage() {
         </div>
 
         {/* ── SECTION: Outbound Links ── */}
-        <div className="pt-6 border-t border-neutral-300/90">
-          <p className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-3">
+        <div className="pt-4 sm:pt-6 border-t border-neutral-300/90">
+          <p className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2.5 sm:mb-3">
             Connect &amp; Profiles
           </p>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-neutral-700">
+          <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-2 text-xs sm:text-sm text-neutral-700">
             <a
               href="https://github.com/AbinVarghexe"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 font-semibold hover:text-black transition"
             >
-              <IconArrowUpRight size={16} className="text-black" />
+              <IconArrowUpRight size={15} className="text-black shrink-0" />
               <span>GitHub</span>
             </a>
             <a
@@ -543,7 +543,7 @@ export default function ResumePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 font-semibold hover:text-black transition"
             >
-              <IconArrowUpRight size={16} className="text-black" />
+              <IconArrowUpRight size={15} className="text-black shrink-0" />
               <span>LinkedIn</span>
             </a>
             <a
@@ -552,21 +552,21 @@ export default function ResumePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 font-semibold hover:text-black transition"
             >
-              <IconArrowUpRight size={16} className="text-black" />
+              <IconArrowUpRight size={15} className="text-black shrink-0" />
               <span>Behance</span>
             </a>
             <a
               href="mailto:abinnnvarghese@gmail.com"
               className="inline-flex items-center gap-1 font-semibold hover:text-black transition"
             >
-              <IconArrowUpRight size={16} className="text-black" />
+              <IconArrowUpRight size={15} className="text-black shrink-0" />
               <span>Email</span>
             </a>
             <a
               href="tel:+916282824259"
               className="inline-flex items-center gap-1 font-semibold hover:text-black transition"
             >
-              <IconArrowUpRight size={16} className="text-black" />
+              <IconArrowUpRight size={15} className="text-black shrink-0" />
               <span>+91 6282824259</span>
             </a>
           </div>

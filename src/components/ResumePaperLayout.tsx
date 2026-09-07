@@ -25,9 +25,9 @@ export default function ResumePaperLayout({ children }: ResumePaperLayoutProps) 
       </div>
 
       {/* ── 2. Scrollable Viewport Container ── */}
-      <div className="relative z-10 min-h-screen w-full px-2.5 py-4 sm:px-6 sm:py-10 md:py-16 lg:py-20 flex justify-center">
+      <div className="relative z-10 min-h-screen w-full px-3 py-5 sm:px-6 sm:py-10 md:py-16 lg:py-20 flex justify-center">
         {/* ── 3. Centered Expansive Physical Paper Document (Responsive Layout) ── */}
-        <div className="relative w-full max-w-5xl lg:max-w-[1060px] xl:max-w-[1100px] overflow-hidden rounded-xl sm:rounded-3xl border border-[#e5e1d3] bg-[#faf8f4] p-4 sm:p-10 md:p-14 lg:p-20 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.45),0_10px_24px_-5px_rgba(0,0,0,0.25)] ring-1 ring-black/5 backdrop-blur-2xs">
+        <div className="relative w-full max-w-5xl lg:max-w-[1060px] xl:max-w-[1100px] overflow-hidden rounded-2xl sm:rounded-3xl border border-[#e5e1d3] bg-[#faf8f4] p-5 sm:p-10 md:p-14 lg:p-20 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.65),0_12px_28px_-5px_rgba(0,0,0,0.40)] ring-1 ring-black/10 backdrop-blur-2xs">
           {/* Paper Texture: Tactile Fiber Noise Overlay */}
           <div 
             className="pointer-events-none absolute inset-0 z-0 opacity-[0.065] mix-blend-multiply"

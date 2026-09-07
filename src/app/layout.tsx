@@ -74,7 +74,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${plusJakarta.variable} ${jetbrainsMono.variable}`}>
-      <body className="font-sans antialiased bg-[#fbf9f4] text-neutral-900">
+      <body className="font-sans antialiased text-neutral-900 bg-neutral-950">
         {children}
       </body>
     </html>

@@ -90,8 +90,8 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
   ];
 
   return (
-    <div className="my-6 sm:my-10 flex justify-center px-1">
-      <div className="relative inline-flex max-w-full items-center gap-1.5 sm:gap-3 overflow-x-auto rounded-2xl border border-neutral-200/90 bg-white/95 p-1.5 sm:p-2.5 shadow-[0_12px_36px_-6px_rgba(0,0,0,0.1),0_4px_12px_rgba(0,0,0,0.04)] backdrop-blur-md no-scrollbar">
+    <div className="my-6 sm:my-10 flex justify-center w-full px-1">
+      <div className="relative inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 rounded-2xl border border-neutral-300/80 bg-white/95 p-2 sm:p-2.5 shadow-[0_12px_36px_-6px_rgba(0,0,0,0.12),0_4px_12px_rgba(0,0,0,0.06)] backdrop-blur-md max-w-full">
         {dockItems.map((item) => {
           const Icon = item.icon;
           const isHovered = hoveredId === item.id;
@@ -101,10 +101,10 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
               key={item.id}
               onMouseEnter={() => setHoveredId(item.id)}
               onMouseLeave={() => setHoveredId(null)}
-              whileHover={{ scale: 1.22, y: -6 }}
+              whileHover={{ scale: 1.18, y: -4 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 450, damping: 22 }}
-              className="relative flex cursor-pointer items-center justify-center focus:outline-none"
+              className="relative flex cursor-pointer items-center justify-center focus:outline-none touch-manipulation"
             >
               {/* Tooltip */}
               <AnimatePresence>
@@ -114,7 +114,7 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
                     animate={{ opacity: 1, y: -44, scale: 1 }}
                     exit={{ opacity: 0, y: 4, scale: 0.92 }}
                     transition={{ duration: 0.15 }}
-                    className="pointer-events-none absolute z-50 whitespace-nowrap rounded-lg border border-neutral-800 bg-neutral-900 px-2.5 py-1 text-center shadow-xl"
+                    className="pointer-events-none absolute z-50 whitespace-nowrap rounded-lg border border-neutral-800 bg-neutral-900 px-2.5 py-1 text-center shadow-xl hidden sm:block"
                   >
                     <p className="text-[11px] font-semibold text-white leading-tight">{item.label}</p>
                     <p className="text-[9px] text-neutral-400 leading-tight">{item.sublabel}</p>
@@ -125,9 +125,10 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
 
               {/* Squircle App Icon */}
               <div
-                className={`flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl sm:rounded-2xl ${item.bg} ${item.textColor || "text-white"} shadow-[0_2px_8px_rgba(0,0,0,0.12)] ring-1 ring-black/5 transition-transform`}
+                className={`flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl sm:rounded-2xl ${item.bg} ${item.textColor || "text-white"} shadow-[0_2px_8px_rgba(0,0,0,0.18)] ring-1 ring-black/10 transition-transform`}
+                title={item.label}
               >
-                <Icon size={20} stroke={2} className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Icon size={20} stroke={2} className="h-4.5 w-4.5 sm:h-5 sm:w-5" />
               </div>
             </motion.div>
           );
