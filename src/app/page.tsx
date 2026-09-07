@@ -1,13 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { 
   IconStack2,
   IconArrowUpRight,
   IconFileText,
-  IconPalette,
   IconDownload,
   IconBriefcase,
   IconCode,
@@ -46,33 +44,124 @@ export default function ResumePage() {
         </motion.a>
       </div>
 
-      {/* ── 2. Profile Avatar & Identity ── */}
+      {/* ── 2. Profile Avatar (Rounded Hexagonal Shape) & Identity ── */}
       <div className="mt-8 sm:mt-10 flex flex-col items-center text-center">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="relative h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-full border-2 border-white shadow-[0_8px_30px_rgba(0,0,0,0.14)] ring-1 ring-black/10 bg-neutral-100"
+          className="relative flex items-center justify-center"
         >
-          <Image
-            src="/abin-varghese.png"
-            alt="Abin Varghese"
-            fill
-            priority
-            className="object-cover object-top"
-          />
+          {/* Rounded Hexagon Avatar Container */}
+          <svg
+            viewBox="0 0 100 100"
+            className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 overflow-visible drop-shadow-[0_12px_32px_rgba(0,0,0,0.16)]"
+          >
+            <defs>
+              <clipPath id="roundedHexagon">
+                <path d="
+                  M 46 4
+                  Q 50 1.7 54 4
+                  L 90 24.8
+                  Q 94 27.1 94 31.7
+                  L 94 68.3
+                  Q 94 72.9 90 75.2
+                  L 54 96
+                  Q 50 98.3 46 96
+                  L 10 75.2
+                  Q 6 72.9 6 68.3
+                  L 6 31.7
+                  Q 6 27.1 10 24.8
+                  Z
+                " />
+              </clipPath>
+            </defs>
+            {/* Background Fill */}
+            <path
+              d="
+                M 46 4
+                Q 50 1.7 54 4
+                L 90 24.8
+                Q 94 27.1 94 31.7
+                L 94 68.3
+                Q 94 72.9 90 75.2
+                L 54 96
+                Q 50 98.3 46 96
+                L 10 75.2
+                Q 6 72.9 6 68.3
+                L 6 31.7
+                Q 6 27.1 10 24.8
+                Z
+              "
+              fill="#f3f0ea"
+            />
+            {/* Clipped Profile Photo */}
+            <g clipPath="url(#roundedHexagon)">
+              <image
+                href="/abin-varghese.png"
+                x="0"
+                y="-4"
+                width="100"
+                height="108"
+                preserveAspectRatio="xMidYMid slice"
+              />
+            </g>
+            {/* Crisp Outer Border Stroke */}
+            <path
+              d="
+                M 46 4
+                Q 50 1.7 54 4
+                L 90 24.8
+                Q 94 27.1 94 31.7
+                L 94 68.3
+                Q 94 72.9 90 75.2
+                L 54 96
+                Q 50 98.3 46 96
+                L 10 75.2
+                Q 6 72.9 6 68.3
+                L 6 31.7
+                Q 6 27.1 10 24.8
+                Z
+              "
+              fill="none"
+              stroke="white"
+              strokeWidth="3.5"
+            />
+            {/* Subtle Outer Keyline */}
+            <path
+              d="
+                M 46 4
+                Q 50 1.7 54 4
+                L 90 24.8
+                Q 94 27.1 94 31.7
+                L 94 68.3
+                Q 94 72.9 90 75.2
+                L 54 96
+                Q 50 98.3 46 96
+                L 10 75.2
+                Q 6 72.9 6 68.3
+                L 6 31.7
+                Q 6 27.1 10 24.8
+                Z
+              "
+              fill="none"
+              stroke="rgba(0, 0, 0, 0.1)"
+              strokeWidth="1"
+            />
+          </svg>
         </motion.div>
 
+        {/* ── Massive Name Heading ── */}
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-neutral-950 text-center leading-[1.08]"
+          className="mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-neutral-950 text-center leading-[1.08]"
         >
           Abin Varghese
         </motion.h1>
 
-        {/* ── 3. Sub-header / Role (Scaled Down) ── */}
+        {/* ── Sub-header / Role ── */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -110,7 +199,7 @@ export default function ResumePage() {
         </motion.div>
       </div>
 
-      {/* ── 4. Floating iOS-Style App Icon Dock ── */}
+      {/* ── 3. Floating iOS-Style App Icon Dock ── */}
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -119,21 +208,12 @@ export default function ResumePage() {
         <ResumeDock onOpenResumeModal={() => setIsModalOpen(true)} />
       </motion.div>
 
-      {/* ── 5. Secondary Divider Pill ── */}
-      <div className="my-6 flex justify-center sm:my-8">
-        <div className="inline-flex items-center gap-2 rounded-full border border-neutral-300/80 bg-white/80 px-3.5 py-1 text-[11px] font-medium text-neutral-600 shadow-2xs backdrop-blur-xs">
-          <span className="flex h-1.5 w-1.5 rounded-full bg-black" />
-          <span className="text-[9px] text-neutral-400">▶</span>
-          <span>curriculum vitae &amp; background</span>
-        </div>
-      </div>
-
-      {/* ── 6. Full Structured Resume Document (Clean Line Breakers, No Boxes) ── */}
+      {/* ── 4. Full Structured Resume Document (Clean Line Breakers, No Boxes) ── */}
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.45 }}
-        className="space-y-8 text-[15px] leading-relaxed text-neutral-700 max-w-3xl mx-auto"
+        className="space-y-8 text-[15px] leading-relaxed text-neutral-700 max-w-3xl lg:max-w-4xl mx-auto pt-4"
       >
         {/* ── SECTION: Summary ── */}
         <section className="space-y-2.5">
@@ -478,12 +558,12 @@ export default function ResumePage() {
         {/* Line Breaker */}
         <hr className="border-neutral-200/90" />
 
-        {/* ── SECTION: Instant PDF Download Actions ── */}
-        <div className="my-8 grid grid-cols-1 gap-4 sm:grid-cols-2 pt-2">
+        {/* ── SECTION: Instant Developer CV Action (Design Deck Removed) ── */}
+        <div className="my-8 pt-2 flex justify-center">
           <a
             href="/resume/Abin_Varghese_Resume.pdf"
             download="Abin_Varghese_Resume.pdf"
-            className="group flex items-center justify-between rounded-2xl border border-neutral-300/90 bg-white/95 p-4.5 shadow-2xs transition hover:border-black hover:shadow-xs"
+            className="group inline-flex items-center justify-between gap-6 sm:gap-10 rounded-2xl border border-neutral-300/90 bg-white/95 px-6 py-4.5 shadow-2xs transition hover:border-black hover:shadow-xs w-full max-w-md"
           >
             <div className="flex items-center gap-3.5">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-black text-white shadow-2xs">
@@ -491,24 +571,7 @@ export default function ResumePage() {
               </div>
               <div className="text-left">
                 <p className="text-sm font-bold text-neutral-900 leading-tight">Download Developer CV</p>
-                <p className="text-xs text-neutral-500 mt-0.5">Official PDF · Code &amp; Systems</p>
-              </div>
-            </div>
-            <IconDownload size={20} className="text-neutral-500 group-hover:text-black transition" />
-          </a>
-
-          <a
-            href="/resume/Abin-Varghese-Portfolio.pdf"
-            download="Abin_Varghese_Designer_Portfolio.pdf"
-            className="group flex items-center justify-between rounded-2xl border border-neutral-300/90 bg-white/95 p-4.5 shadow-2xs transition hover:border-black hover:shadow-xs"
-          >
-            <div className="flex items-center gap-3.5">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-black text-white shadow-2xs">
-                <IconPalette size={22} stroke={2} className="text-white" />
-              </div>
-              <div className="text-left">
-                <p className="text-sm font-bold text-neutral-900 leading-tight">Download Design Deck</p>
-                <p className="text-xs text-neutral-500 mt-0.5">Official PDF · UI/UX &amp; Motion</p>
+                <p className="text-xs text-neutral-500 mt-0.5">Official PDF Document · Code &amp; Systems</p>
               </div>
             </div>
             <IconDownload size={20} className="text-neutral-500 group-hover:text-black transition" />
@@ -575,7 +638,7 @@ export default function ResumePage() {
         </div>
       </motion.div>
 
-      {/* ── 7. Interactive Download Modal ── */}
+      {/* ── 5. Interactive Download Modal ── */}
       <ResumeDownloadModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

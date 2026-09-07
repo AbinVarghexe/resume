@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   IconFileText, 
-  IconPalette, 
   IconDownload, 
   IconExternalLink, 
   IconX, 
@@ -34,26 +33,14 @@ export default function ResumeDownloadModal({ isOpen, onClose }: ResumeDownloadM
     };
   }, [isOpen, onClose]);
 
-  const resumes = [
-    {
-      id: "developer",
-      title: "Developer Resume",
-      subtitle: "Full-Stack, React, Next.js & Systems",
-      badge: "Tech & Engineering",
-      icon: IconFileText,
-      pdfUrl: "/resume/Abin_Varghese_Resume.pdf",
-      filename: "Abin_Varghese_Resume.pdf",
-    },
-    {
-      id: "designer",
-      title: "Designer Portfolio Deck",
-      subtitle: "UI/UX, Visual Systems & Motion",
-      badge: "Creative & Design",
-      icon: IconPalette,
-      pdfUrl: "/resume/Abin-Varghese-Portfolio.pdf",
-      filename: "Abin_Varghese_Designer_Portfolio.pdf",
-    },
-  ];
+  const resume = {
+    id: "developer",
+    title: "Developer Resume (CV)",
+    subtitle: "Full-Stack, React, Next.js, Cloud & Systems",
+    badge: "Official Document",
+    pdfUrl: "/resume/Abin_Varghese_Resume.pdf",
+    filename: "Abin_Varghese_Resume.pdf",
+  };
 
   return (
     <AnimatePresence>
@@ -89,63 +76,57 @@ export default function ResumeDownloadModal({ isOpen, onClose }: ResumeDownloadM
             <div className="mb-6">
               <div className="inline-flex items-center gap-1.5 rounded-full border border-neutral-300 bg-white/80 px-3 py-1 text-xs font-medium text-neutral-700 shadow-2xs">
                 <IconSparkles size={14} className="text-black" />
-                <span>Document Archives</span>
+                <span>Official Document Archive</span>
               </div>
               <h3 className="mt-3 text-2xl font-bold tracking-tight text-neutral-900">
-                Official Documents &amp; Portfolios
+                Official Developer Resume
               </h3>
               <p className="mt-1 text-sm text-neutral-600">
-                Select an official PDF to download or preview directly in your browser.
+                Download the official PDF document or preview directly in your browser.
               </p>
             </div>
 
-            {/* Resume Options */}
+            {/* Resume Option */}
             <div className="space-y-3.5">
-              {resumes.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div
-                    key={item.id}
-                    className="group relative flex flex-col justify-between gap-4 rounded-xl border border-neutral-200/90 bg-white p-4 transition-all hover:border-black hover:shadow-2xs sm:flex-row sm:items-center"
-                  >
-                    <div className="flex items-start gap-3.5">
-                      <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black text-white shadow-2xs">
-                        <Icon size={20} stroke={2} className="text-white" />
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <h4 className="font-semibold text-neutral-900">{item.title}</h4>
-                          <span className="rounded-md bg-neutral-100 px-2 py-0.5 text-[10px] font-medium text-neutral-700">
-                            {item.badge}
-                          </span>
-                        </div>
-                        <p className="text-xs text-neutral-500">{item.subtitle}</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-2 self-end sm:self-center">
-                      <a
-                        href={item.pdfUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-lg border border-neutral-300 bg-neutral-50 px-3 py-1.5 text-xs font-medium text-neutral-800 transition hover:bg-neutral-100 hover:text-black"
-                        title="Preview in new tab"
-                      >
-                        <IconExternalLink size={14} className="text-black" />
-                        <span>Preview</span>
-                      </a>
-                      <a
-                        href={item.pdfUrl}
-                        download={item.filename}
-                        className="inline-flex items-center gap-1.5 rounded-lg bg-black px-3 py-1.5 text-xs font-medium text-white shadow-2xs transition hover:bg-neutral-800"
-                      >
-                        <IconDownload size={14} className="text-white" />
-                        <span>Download</span>
-                      </a>
-                    </div>
+              <div
+                className="group relative flex flex-col justify-between gap-4 rounded-xl border border-neutral-300 bg-white p-4.5 transition-all hover:border-black hover:shadow-2xs sm:flex-row sm:items-center"
+              >
+                <div className="flex items-start gap-3.5">
+                  <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-black text-white shadow-2xs">
+                    <IconFileText size={22} stroke={2} className="text-white" />
                   </div>
-                );
-              })}
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <h4 className="font-bold text-neutral-900">{resume.title}</h4>
+                      <span className="rounded-md bg-neutral-100 px-2 py-0.5 text-[10px] font-medium text-neutral-700">
+                        {resume.badge}
+                      </span>
+                    </div>
+                    <p className="text-xs text-neutral-500 mt-0.5">{resume.subtitle}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2 self-end sm:self-center">
+                  <a
+                    href={resume.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-neutral-300 bg-neutral-50 px-3.5 py-1.5 text-xs font-medium text-neutral-800 transition hover:bg-neutral-100 hover:text-black"
+                    title="Preview in new tab"
+                  >
+                    <IconExternalLink size={14} className="text-black" />
+                    <span>Preview</span>
+                  </a>
+                  <a
+                    href={resume.pdfUrl}
+                    download={resume.filename}
+                    className="inline-flex items-center gap-1.5 rounded-lg bg-black px-3.5 py-1.5 text-xs font-medium text-white shadow-2xs transition hover:bg-neutral-800"
+                  >
+                    <IconDownload size={14} className="text-white" />
+                    <span>Download</span>
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Footer Notice */}

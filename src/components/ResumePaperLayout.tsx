@@ -26,8 +26,8 @@ export default function ResumePaperLayout({ children }: ResumePaperLayoutProps) 
 
       {/* ── 2. Scrollable Viewport Container ── */}
       <div className="relative z-10 min-h-screen w-full px-3 py-8 sm:px-8 sm:py-14 md:py-20 flex justify-center">
-        {/* ── 3. Centered Expansive Physical Paper Document (Wider Layout) ── */}
-        <div className="relative w-full max-w-4xl lg:max-w-[950px] overflow-hidden rounded-2xl sm:rounded-3xl border border-[#e5e1d3] bg-[#faf8f4] p-7 sm:p-12 md:p-16 lg:p-20 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.45),0_12px_28px_-5px_rgba(0,0,0,0.25)] ring-1 ring-black/5 backdrop-blur-2xs">
+        {/* ── 3. Centered Expansive Physical Paper Document (Wider 1080px Layout) ── */}
+        <div className="relative w-full max-w-5xl lg:max-w-[1060px] xl:max-w-[1100px] overflow-hidden rounded-2xl sm:rounded-3xl border border-[#e5e1d3] bg-[#faf8f4] p-8 sm:p-14 md:p-18 lg:p-22 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.45),0_12px_28px_-5px_rgba(0,0,0,0.25)] ring-1 ring-black/5 backdrop-blur-2xs">
           {/* Paper Texture: Tactile Fiber Noise Overlay */}
           <div 
             className="pointer-events-none absolute inset-0 z-0 opacity-[0.065] mix-blend-multiply"
