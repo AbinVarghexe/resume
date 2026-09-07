@@ -67,7 +67,7 @@ export default function ResumePage() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 text-center leading-[1.15]"
+          className="mt-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-neutral-950 text-center leading-[1.08]"
         >
           Abin Varghese
         </motion.h1>
@@ -138,7 +138,7 @@ export default function ResumePage() {
         {/* ── SECTION: Summary ── */}
         <section className="space-y-2.5">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900">
+            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
               Summary
             </h2>
           </div>
@@ -154,7 +154,7 @@ export default function ResumePage() {
         <section className="space-y-3">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
             <IconSchool size={16} className="text-black" />
-            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900">
+            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
               Education
             </h2>
           </div>
@@ -179,7 +179,7 @@ export default function ResumePage() {
         <section className="space-y-5">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
             <IconBriefcase size={16} className="text-black" />
-            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900">
+            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
               Work Experience
             </h2>
           </div>
@@ -235,7 +235,7 @@ export default function ResumePage() {
         <section className="space-y-5">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
             <IconCode size={16} className="text-black" />
-            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900">
+            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
               Featured Projects
             </h2>
           </div>
@@ -339,7 +339,7 @@ export default function ResumePage() {
         {/* ── SECTION: Technical Skills ── */}
         <section className="space-y-3.5">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900">
+            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
               Skills &amp; Capabilities
             </h2>
           </div>
@@ -370,7 +370,7 @@ export default function ResumePage() {
         <section className="space-y-4">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
             <IconBriefcase size={16} className="text-black" />
-            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900">
+            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
               Internships
             </h2>
           </div>
@@ -418,7 +418,7 @@ export default function ResumePage() {
         <section className="space-y-3">
           <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
             <IconTrophy size={16} className="text-black" />
-            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900">
+            <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
               Honors &amp; Hackathon Awards
             </h2>
           </div>
@@ -447,7 +447,7 @@ export default function ResumePage() {
           <section className="space-y-2.5">
             <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
               <IconCertificate size={16} className="text-black" />
-              <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900">
+              <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
                 Certifications
               </h2>
             </div>
@@ -463,7 +463,7 @@ export default function ResumePage() {
           <section className="space-y-2.5">
             <div className="flex items-center gap-2 pb-1.5 border-b border-neutral-300/90">
               <IconUsers size={16} className="text-black" />
-              <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900">
+              <h2 className="text-sm font-black uppercase tracking-wider text-neutral-950">
                 Leadership &amp; Community
               </h2>
             </div>
