@@ -2,7 +2,15 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FileText, Palette, Download, ExternalLink, X, Sparkles, Check } from "lucide-react";
+import { 
+  IconFileText, 
+  IconPalette, 
+  IconDownload, 
+  IconExternalLink, 
+  IconX, 
+  IconSparkles, 
+  IconCheck 
+} from "@tabler/icons-react";
 
 interface ResumeDownloadModalProps {
   isOpen: boolean;
@@ -32,8 +40,7 @@ export default function ResumeDownloadModal({ isOpen, onClose }: ResumeDownloadM
       title: "Developer Resume",
       subtitle: "Full-Stack, React, Next.js & Systems",
       badge: "Tech & Engineering",
-      icon: FileText,
-      color: "from-blue-600 to-indigo-700",
+      icon: IconFileText,
       pdfUrl: "/resume/Abin_Varghese_Resume.pdf",
       filename: "Abin_Varghese_Resume.pdf",
     },
@@ -42,8 +49,7 @@ export default function ResumeDownloadModal({ isOpen, onClose }: ResumeDownloadM
       title: "Designer Portfolio Deck",
       subtitle: "UI/UX, Visual Systems & Motion",
       badge: "Creative & Design",
-      icon: Palette,
-      color: "from-rose-500 to-amber-600",
+      icon: IconPalette,
       pdfUrl: "/resume/Abin-Varghese-Portfolio.pdf",
       filename: "Abin_Varghese_Designer_Portfolio.pdf",
     },
@@ -59,7 +65,7 @@ export default function ResumeDownloadModal({ isOpen, onClose }: ResumeDownloadM
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/45 backdrop-blur-xs"
+            className="fixed inset-0 bg-black/50 backdrop-blur-xs"
           />
 
           {/* Modal Card */}
@@ -68,32 +74,25 @@ export default function ResumeDownloadModal({ isOpen, onClose }: ResumeDownloadM
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 12 }}
             transition={{ type: "spring", duration: 0.35, bounce: 0.15 }}
-            className="relative w-full max-w-lg overflow-hidden rounded-2xl border border-neutral-200/90 bg-[#fcfbf9] p-6 shadow-2xl sm:p-8"
-            style={{
-              backgroundImage: `
-                linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px)
-              `,
-              backgroundSize: "20px 20px",
-            }}
+            className="relative w-full max-w-lg overflow-hidden rounded-2xl border border-neutral-300 bg-[#fcfbf9] p-6 shadow-2xl sm:p-8"
           >
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute right-4 top-4 rounded-full p-2 text-neutral-400 transition hover:bg-neutral-100 hover:text-neutral-800"
+              className="absolute right-4 top-4 rounded-full p-2 text-neutral-500 transition hover:bg-neutral-100 hover:text-black"
               aria-label="Close modal"
             >
-              <X className="h-5 w-5" />
+              <IconX size={20} />
             </button>
 
             {/* Header */}
             <div className="mb-6">
-              <div className="inline-flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white/80 px-3 py-1 text-xs font-medium text-neutral-600 shadow-xs backdrop-blur-xs">
-                <Sparkles className="h-3.5 w-3.5 text-amber-500" />
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-neutral-300 bg-white/80 px-3 py-1 text-xs font-medium text-neutral-700 shadow-2xs">
+                <IconSparkles size={14} className="text-black" />
                 <span>Document Archives</span>
               </div>
               <h3 className="mt-3 text-2xl font-bold tracking-tight text-neutral-900">
-                Official Documents & Portfolios
+                Official Documents &amp; Portfolios
               </h3>
               <p className="mt-1 text-sm text-neutral-600">
                 Select an official PDF to download or preview directly in your browser.
@@ -107,16 +106,16 @@ export default function ResumeDownloadModal({ isOpen, onClose }: ResumeDownloadM
                 return (
                   <div
                     key={item.id}
-                    className="group relative flex flex-col justify-between gap-4 rounded-xl border border-neutral-200 bg-white/95 p-4 transition-all hover:border-neutral-400 hover:shadow-md sm:flex-row sm:items-center"
+                    className="group relative flex flex-col justify-between gap-4 rounded-xl border border-neutral-200/90 bg-white p-4 transition-all hover:border-black hover:shadow-2xs sm:flex-row sm:items-center"
                   >
                     <div className="flex items-start gap-3.5">
-                      <div className={`mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-linear-to-br ${item.color} text-white shadow-xs`}>
-                        <Icon className="h-5 w-5" />
+                      <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black text-white shadow-2xs">
+                        <Icon size={20} stroke={2} className="text-white" />
                       </div>
                       <div>
                         <div className="flex items-center gap-2">
                           <h4 className="font-semibold text-neutral-900">{item.title}</h4>
-                          <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-[10px] font-medium text-neutral-600">
+                          <span className="rounded-md bg-neutral-100 px-2 py-0.5 text-[10px] font-medium text-neutral-700">
                             {item.badge}
                           </span>
                         </div>
@@ -129,18 +128,18 @@ export default function ResumeDownloadModal({ isOpen, onClose }: ResumeDownloadM
                         href={item.pdfUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-1.5 text-xs font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900"
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-neutral-300 bg-neutral-50 px-3 py-1.5 text-xs font-medium text-neutral-800 transition hover:bg-neutral-100 hover:text-black"
                         title="Preview in new tab"
                       >
-                        <ExternalLink className="h-3.5 w-3.5" />
+                        <IconExternalLink size={14} className="text-black" />
                         <span>Preview</span>
                       </a>
                       <a
                         href={item.pdfUrl}
                         download={item.filename}
-                        className="inline-flex items-center gap-1.5 rounded-lg bg-neutral-900 px-3 py-1.5 text-xs font-medium text-white shadow-xs transition hover:bg-neutral-800"
+                        className="inline-flex items-center gap-1.5 rounded-lg bg-black px-3 py-1.5 text-xs font-medium text-white shadow-2xs transition hover:bg-neutral-800"
                       >
-                        <Download className="h-3.5 w-3.5" />
+                        <IconDownload size={14} className="text-white" />
                         <span>Download</span>
                       </a>
                     </div>
@@ -150,7 +149,7 @@ export default function ResumeDownloadModal({ isOpen, onClose }: ResumeDownloadM
             </div>
 
             {/* Footer Notice */}
-            <div className="mt-6 flex items-center justify-between border-t border-neutral-200/80 pt-4 text-[11px] text-neutral-500">
+            <div className="mt-6 flex items-center justify-between border-t border-neutral-200 pt-4 text-[11px] text-neutral-500">
               <span>Updated 2026 · Abin Varghese</span>
               <button
                 onClick={() => {
@@ -158,15 +157,15 @@ export default function ResumeDownloadModal({ isOpen, onClose }: ResumeDownloadM
                   setCopied("link");
                   setTimeout(() => setCopied(null), 2000);
                 }}
-                className="inline-flex items-center gap-1 font-medium text-neutral-600 transition hover:text-neutral-900"
+                className="inline-flex items-center gap-1 font-medium text-neutral-700 transition hover:text-black"
               >
                 {copied === "link" ? (
                   <>
-                    <Check className="h-3 w-3 text-emerald-600" />
-                    <span className="text-emerald-600">Copied Link</span>
+                    <IconCheck size={14} className="text-emerald-600" />
+                    <span className="text-emerald-600 font-semibold">Copied Link</span>
                   </>
                 ) : (
-                  <span>Copy Link</span>
+                  <span>Copy Page Link</span>
                 )}
               </button>
             </div>
