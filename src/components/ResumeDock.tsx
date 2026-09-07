@@ -3,15 +3,11 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  IconTerminal2,
   IconWorld,
   IconBrandFigma,
   IconBrandGithub,
-  IconStack2,
   IconBrandBehance,
-  IconCalendar,
   IconBrandLinkedin,
-  IconBrandTelegram,
   IconMail,
   IconFileDownload,
 } from "@tabler/icons-react";
@@ -35,15 +31,6 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   const dockItems: DockItem[] = [
-    {
-      id: "terminal",
-      label: "Projects & Code",
-      sublabel: "Interactive Web & Systems",
-      bg: "bg-[#eab308]",
-      textColor: "text-neutral-900",
-      icon: IconTerminal2,
-      href: "https://abinvarghese.app/projects",
-    },
     {
       id: "portfolio",
       label: "Main Website",
@@ -69,14 +56,6 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
       href: "https://github.com/AbinVarghexe",
     },
     {
-      id: "creative",
-      label: "Creative Work",
-      sublabel: "3D & Motion Graphics",
-      bg: "bg-[#0284c7]",
-      icon: IconStack2,
-      href: "https://abinvarghese.app/#creative",
-    },
-    {
       id: "behance",
       label: "Behance",
       sublabel: "toabinvarghese",
@@ -85,28 +64,12 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
       href: "https://www.behance.net/toabinvarghese",
     },
     {
-      id: "calendar",
-      label: "Book a Call",
-      sublabel: "1:1 Chat via Cal.com",
-      bg: "bg-[#6366f1]",
-      icon: IconCalendar,
-      href: "https://cal.com/toabinvarghese",
-    },
-    {
       id: "linkedin",
       label: "LinkedIn",
       sublabel: "in/toabinvarghese",
       bg: "bg-[#0a66c2]",
       icon: IconBrandLinkedin,
       href: "https://www.linkedin.com/in/toabinvarghese",
-    },
-    {
-      id: "telegram",
-      label: "Telegram",
-      sublabel: "@toabinvarghese",
-      bg: "bg-[#229ed9]",
-      icon: IconBrandTelegram,
-      href: "https://t.me/toabinvarghese",
     },
     {
       id: "email",
@@ -118,8 +81,8 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
     },
     {
       id: "resume-action",
-      label: "Download Resumes",
-      sublabel: "Developer CV & Designer Deck",
+      label: "Download Developer CV",
+      sublabel: "Official PDF Document",
       bg: "bg-[#4f46e5]",
       icon: IconFileDownload,
       onClick: onOpenResumeModal,
@@ -128,7 +91,7 @@ export default function ResumeDock({ onOpenResumeModal }: ResumeDockProps) {
 
   return (
     <div className="my-8 flex justify-center sm:my-10">
-      <div className="relative inline-flex items-center gap-1.5 sm:gap-2.5 rounded-2xl border border-neutral-200/90 bg-white/90 p-2 sm:p-2.5 shadow-[0_12px_36px_-6px_rgba(0,0,0,0.1),0_4px_12px_rgba(0,0,0,0.04)] backdrop-blur-md">
+      <div className="relative inline-flex items-center gap-2 sm:gap-3 rounded-2xl border border-neutral-200/90 bg-white/90 p-2 sm:p-2.5 shadow-[0_12px_36px_-6px_rgba(0,0,0,0.1),0_4px_12px_rgba(0,0,0,0.04)] backdrop-blur-md">
         {dockItems.map((item) => {
           const Icon = item.icon;
           const isHovered = hoveredId === item.id;
