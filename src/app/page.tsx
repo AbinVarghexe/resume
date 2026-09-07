@@ -54,7 +54,7 @@ export default function ResumePage() {
           className="relative flex items-center justify-center"
         >
           {/* 8-Lobed Scalloped Avatar Container */}
-          <div className="relative w-48 h-48 sm:w-52 sm:h-52 md:w-56 md:h-56 filter drop-shadow-[0_18px_36px_rgba(0,0,0,0.22)]">
+          <div className="relative w-44 h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 filter drop-shadow-[0_16px_32px_rgba(0,0,0,0.20)]">
             {/* White Outer Border Mask Layer */}
             <div 
               className="absolute inset-0 bg-white"
