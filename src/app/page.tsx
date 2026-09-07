@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { 
   IconStack2,
@@ -52,103 +53,46 @@ export default function ResumePage() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="relative flex items-center justify-center"
         >
-          {/* Rounded Hexagon Avatar Container */}
-          <svg
-            viewBox="0 0 100 100"
-            className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 overflow-visible drop-shadow-[0_12px_32px_rgba(0,0,0,0.16)]"
-          >
-            <defs>
-              <clipPath id="roundedHexagon">
-                <path d="
-                  M 46 4
-                  Q 50 1.7 54 4
-                  L 90 24.8
-                  Q 94 27.1 94 31.7
-                  L 94 68.3
-                  Q 94 72.9 90 75.2
-                  L 54 96
-                  Q 50 98.3 46 96
-                  L 10 75.2
-                  Q 6 72.9 6 68.3
-                  L 6 31.7
-                  Q 6 27.1 10 24.8
-                  Z
-                " />
-              </clipPath>
-            </defs>
-            {/* Background Fill */}
-            <path
-              d="
-                M 46 4
-                Q 50 1.7 54 4
-                L 90 24.8
-                Q 94 27.1 94 31.7
-                L 94 68.3
-                Q 94 72.9 90 75.2
-                L 54 96
-                Q 50 98.3 46 96
-                L 10 75.2
-                Q 6 72.9 6 68.3
-                L 6 31.7
-                Q 6 27.1 10 24.8
-                Z
-              "
-              fill="#f3f0ea"
+          {/* 8-Petal Scalloped Flower Avatar Container */}
+          <div className="relative w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 filter drop-shadow-[0_14px_30px_rgba(0,0,0,0.18)]">
+            {/* White Outer Border Mask Layer */}
+            <div 
+              className="absolute inset-0 bg-white"
+              style={{
+                WebkitMaskImage: "url(/avatar-mask.png)",
+                maskImage: "url(/avatar-mask.png)",
+                WebkitMaskSize: "contain",
+                maskSize: "contain",
+                WebkitMaskRepeat: "no-repeat",
+                maskRepeat: "no-repeat",
+                WebkitMaskPosition: "center",
+                maskPosition: "center",
+              }}
             />
-            {/* Clipped Profile Photo */}
-            <g clipPath="url(#roundedHexagon)">
-              <image
-                href="/abin-varghese.png"
-                x="0"
-                y="-4"
-                width="100"
-                height="108"
-                preserveAspectRatio="xMidYMid slice"
+
+            {/* Inset Profile Photo Layer */}
+            <div 
+              className="absolute inset-[3.5px] bg-[#f5f2eb] overflow-hidden"
+              style={{
+                WebkitMaskImage: "url(/avatar-mask.png)",
+                maskImage: "url(/avatar-mask.png)",
+                WebkitMaskSize: "contain",
+                maskSize: "contain",
+                WebkitMaskRepeat: "no-repeat",
+                maskRepeat: "no-repeat",
+                WebkitMaskPosition: "center",
+                maskPosition: "center",
+              }}
+            >
+              <Image
+                src="/abin-varghese.png"
+                alt="Abin Varghese"
+                fill
+                priority
+                className="object-cover object-top scale-105"
               />
-            </g>
-            {/* Crisp Outer Border Stroke */}
-            <path
-              d="
-                M 46 4
-                Q 50 1.7 54 4
-                L 90 24.8
-                Q 94 27.1 94 31.7
-                L 94 68.3
-                Q 94 72.9 90 75.2
-                L 54 96
-                Q 50 98.3 46 96
-                L 10 75.2
-                Q 6 72.9 6 68.3
-                L 6 31.7
-                Q 6 27.1 10 24.8
-                Z
-              "
-              fill="none"
-              stroke="white"
-              strokeWidth="3.5"
-            />
-            {/* Subtle Outer Keyline */}
-            <path
-              d="
-                M 46 4
-                Q 50 1.7 54 4
-                L 90 24.8
-                Q 94 27.1 94 31.7
-                L 94 68.3
-                Q 94 72.9 90 75.2
-                L 54 96
-                Q 50 98.3 46 96
-                L 10 75.2
-                Q 6 72.9 6 68.3
-                L 6 31.7
-                Q 6 27.1 10 24.8
-                Z
-              "
-              fill="none"
-              stroke="rgba(0, 0, 0, 0.1)"
-              strokeWidth="1"
-            />
-          </svg>
+            </div>
+          </div>
         </motion.div>
 
         {/* ── Massive Name Heading ── */}
