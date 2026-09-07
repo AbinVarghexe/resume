@@ -28,7 +28,7 @@ export default function ResumePage() {
           href="https://abinvarghese.app"
           target="_blank"
           rel="noopener noreferrer"
-          className="group inline-flex items-center gap-2 rounded-full border border-neutral-300/80 bg-white/90 px-4 py-1 text-xs font-semibold text-neutral-600 shadow-2xs backdrop-blur-xs transition hover:border-neutral-500 hover:text-neutral-900"
+          className="group inline-flex items-center gap-2 rounded-full border border-neutral-300/80 bg-white/90 px-4 py-1.5 text-xs font-semibold text-neutral-600 shadow-2xs backdrop-blur-xs transition hover:border-neutral-500 hover:text-neutral-900"
         >
           <span className="flex h-2 w-2 rounded-full bg-neutral-400 ring-2 ring-neutral-200 group-hover:bg-neutral-900 transition" />
           <span className="text-[10px] text-neutral-400">▶</span>
@@ -37,7 +37,7 @@ export default function ResumePage() {
       </div>
 
       {/* ── 2. Profile Avatar & Subtitle ── */}
-      <div className="mt-8 flex flex-col items-center text-center">
+      <div className="mt-8 sm:mt-10 flex flex-col items-center text-center">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -67,7 +67,7 @@ export default function ResumePage() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-3 max-w-xl text-balance text-3xl font-extrabold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl leading-[1.15] text-center"
+          className="mt-3.5 max-w-2xl text-balance text-3xl font-extrabold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl leading-[1.18] text-center"
         >
           Full-stack{" "}
           <span className="inline-flex items-center align-middle mx-1 -mt-1 p-1 rounded-lg bg-neutral-100 border border-neutral-300 shadow-2xs">
@@ -101,7 +101,7 @@ export default function ResumePage() {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.45 }}
-        className="space-y-6 text-[15px] sm:text-[16px] leading-relaxed text-neutral-700 max-w-xl mx-auto font-normal"
+        className="space-y-6 text-[15px] sm:text-[16px] leading-relaxed text-neutral-700 max-w-2xl mx-auto font-normal"
       >
         <p className="font-semibold text-neutral-900 text-lg">
           Hi there 👋 <span className="font-mono text-neutral-400 font-normal">ʕ•ᴥ•ʔ</span>
@@ -134,7 +134,7 @@ export default function ResumePage() {
         </p>
 
         {/* Hackathon Highlights List */}
-        <div className="my-4 space-y-3 rounded-2xl border border-neutral-200/90 bg-white/80 p-4 sm:p-5 shadow-2xs backdrop-blur-xs">
+        <div className="my-4 space-y-3 rounded-2xl border border-neutral-200/90 bg-white/80 p-5 sm:p-6 shadow-2xs backdrop-blur-xs">
           <div className="flex items-start gap-3.5">
             <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-800 text-xs font-bold shadow-2xs">
               ★
@@ -171,13 +171,13 @@ export default function ResumePage() {
         </p>
 
         {/* ── 7. Instant Download Quick Action Cards ── */}
-        <div className="my-6 grid grid-cols-1 gap-3.5 sm:grid-cols-2 pt-2">
+        <div className="my-6 grid grid-cols-1 gap-4 sm:grid-cols-2 pt-2">
           <a
             href="/resume/Abin_Varghese_Resume.pdf"
             download="Abin_Varghese_Resume.pdf"
-            className="group flex items-center justify-between rounded-xl border border-neutral-200/90 bg-white/95 p-3.5 shadow-xs transition hover:border-neutral-400 hover:shadow-sm"
+            className="group flex items-center justify-between rounded-xl border border-neutral-200/90 bg-white/95 p-4 shadow-xs transition hover:border-neutral-400 hover:shadow-sm"
           >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3.5">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 text-white shadow-xs">
                 <IconFileText size={20} stroke={2} />
               </div>
@@ -192,9 +192,9 @@ export default function ResumePage() {
           <a
             href="/resume/Abin-Varghese-Portfolio.pdf"
             download="Abin_Varghese_Designer_Portfolio.pdf"
-            className="group flex items-center justify-between rounded-xl border border-neutral-200/90 bg-white/95 p-3.5 shadow-xs transition hover:border-neutral-400 hover:shadow-sm"
+            className="group flex items-center justify-between rounded-xl border border-neutral-200/90 bg-white/95 p-4 shadow-xs transition hover:border-neutral-400 hover:shadow-sm"
           >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3.5">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-rose-500 text-white shadow-xs">
                 <IconPalette size={20} stroke={2} />
               </div>
@@ -212,7 +212,7 @@ export default function ResumePage() {
           <p className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-3">
             Let&apos;s connect
           </p>
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-neutral-600">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-neutral-600">
             <a
               href="https://t.me/toabinvarghese"
               target="_blank"

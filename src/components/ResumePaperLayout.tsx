@@ -19,14 +19,14 @@ export default function ResumePaperLayout({ children }: ResumePaperLayoutProps) 
           priority
           className="object-cover object-center"
         />
-        {/* Subtle ambient lighting vignette overlay */}
-        <div className="absolute inset-0 bg-black/10 mix-blend-multiply" />
+        {/* Subtle ambient lighting overlay */}
+        <div className="absolute inset-0 bg-black/5 mix-blend-multiply" />
       </div>
 
       {/* ── 2. Scrollable Viewport Container ── */}
-      <div className="relative z-10 min-h-screen w-full px-3 py-6 sm:px-6 sm:py-12 md:py-16">
-        {/* ── 3. Centered Physical Paper Document ── */}
-        <div className="relative mx-auto max-w-2xl overflow-hidden rounded-2xl sm:rounded-3xl border border-[#e5e1d3] bg-[#faf8f4] p-6 sm:p-10 md:p-12 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.45),0_12px_28px_-5px_rgba(0,0,0,0.25)] ring-1 ring-black/5 backdrop-blur-2xs">
+      <div className="relative z-10 min-h-screen w-full px-3 py-8 sm:px-8 sm:py-14 md:py-20 flex justify-center">
+        {/* ── 3. Centered Wider Physical Paper Document ── */}
+        <div className="relative w-full max-w-3xl md:max-w-[820px] overflow-hidden rounded-2xl sm:rounded-3xl border border-[#e5e1d3] bg-[#faf8f4] p-7 sm:p-12 md:p-16 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.45),0_12px_28px_-5px_rgba(0,0,0,0.25)] ring-1 ring-black/5 backdrop-blur-2xs">
           {/* Paper Texture: Tactile Fiber Noise Overlay */}
           <div 
             className="pointer-events-none absolute inset-0 z-0 opacity-[0.065] mix-blend-multiply"
