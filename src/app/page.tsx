@@ -54,7 +54,7 @@ export default function ResumePage() {
           className="relative flex items-center justify-center"
         >
           {/* 8-Lobed Scalloped Avatar Container */}
-          <div className="relative w-40 h-40 sm:w-44 sm:h-44 md:w-48 md:h-48 filter drop-shadow-[0_16px_32px_rgba(0,0,0,0.22)]">
+          <div className="relative w-48 h-48 sm:w-52 sm:h-52 md:w-56 md:h-56 filter drop-shadow-[0_18px_36px_rgba(0,0,0,0.22)]">
             {/* White Outer Border Mask Layer */}
             <div 
               className="absolute inset-0 bg-white"
@@ -72,7 +72,7 @@ export default function ResumePage() {
 
             {/* Inset Profile Photo Layer */}
             <div 
-              className="absolute inset-[3.5px] bg-[#f5f2eb] overflow-hidden"
+              className="absolute inset-[4px] bg-[#f5f2eb] overflow-hidden"
               style={{
                 WebkitMaskImage: "url(/avatar-mask.png)",
                 maskImage: "url(/avatar-mask.png)",
@@ -554,15 +554,6 @@ export default function ResumePage() {
             >
               <IconArrowUpRight size={16} className="text-black" />
               <span>Behance</span>
-            </a>
-            <a
-              href="https://t.me/toabinvarghese"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 font-semibold hover:text-black transition"
-            >
-              <IconArrowUpRight size={16} className="text-black" />
-              <span>Telegram</span>
             </a>
             <a
               href="mailto:abinnnvarghese@gmail.com"
